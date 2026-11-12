@@ -1,0 +1,35 @@
+Zumbyte Remote 0.3.0-alpha.1
+
+1. Windows-Installer aus dem offiziellen Release-Repository starten.
+2. Danach die Desktopverknüpfung "Zumbyte Remote" öffnen.
+3. Eigene HTTPS-Serveradresse eintragen und zentral anmelden.
+4. Für Zugriff in einer offenen Sitzung: "Dieser Computer" zuordnen.
+5. Für Zugriff ohne offene App: "Windows-Dienst einrichten" auswählen.
+   Windows fragt einmal nach Administratorrechten.
+6. Beim Dienstgerät unter dem Zahnrad "Mein Konto" oder ein zusätzliches
+   Gerätepasswort einstellen. Die Voreinstellung verlangt lokale Bestätigung.
+7. Gerät auf einem anderen Computer auswählen und "Bildschirm öffnen".
+   Jede Verbindung öffnet ein eigenes Fenster. Oben Monitor und Bildqualität
+   wählen. "Scharf" nutzt die Originalauflösung, "1:1" die Originalgröße.
+   Ins Bild klicken, um Maus und Tastatur zu verwenden. Zum Freigeben neben
+   das Bild klicken oder "Steuern" abschalten.
+
+Der Dienst startet mit Windows. Er benötigt kein gespeichertes Windows-Kennwort.
+Falls Windows eine Anmeldung verlangt, werden die Windows-Anmeldedaten direkt
+am übertragenen Anmeldebildschirm eingegeben. Zentrales Login und Windows-
+Anmeldung bleiben getrennt.
+
+Unter "Updates" neue Versionen prüfen und den geprüften Installer starten.
+Die Prüfung verwendet Release-Feed und direkte Dateien, keine GitHub-API.
+Signatur und SHA-256 werden vor der Installation geprüft.
+
+Die Version ist eine Alpha und derzeit nicht Authenticode-signiert. Die
+Desktop-App und der Windows-Dienst haben eigene feste Geräteeinträge.
+Text und Dateien lassen sich in beiden Richtungen kopieren und einfügen.
+Ordner werden noch nicht übertragen. Für die neuen Funktionen zuerst den
+Server und anschließend beide beteiligten Desktop-Apps/Dienste aktualisieren.
+Beim Schließen des Hauptfensters läuft die App im Infobereich weiter.
+
+Eine Deinstallation entfernt App, Verknüpfungen und Dienst. Vorhandene Profile
+und Dienstzuordnungen werden für eine mögliche Wiederinstallation erhalten.
+Gerätezugriff kann jederzeit in der zentralen Geräteliste widerrufen werden.

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>zumbyte-remote</Name>
+  <Repository>ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1</Repository>
+  <Registry>https://github.com/orgs/ZUMBYTE-AppSolution/packages/container/package/zumbyte-remote-server</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues</Support>
+  <Project>https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release</Project>
+  <Overview>Dein eigener Server für Zumbyte Remote: zentrale Anmeldung, feste Geräteliste und Fernzugriff auf eingerichtete Computer. Die Apps verbinden sich über deine HTTPS-Adresse. Konten und Geräte bleiben im Appdata-Ordner erhalten. Signierte Anwendungsupdates benötigen weder GitHub-API noch GitHub-Token. Alpha-Version. Vor dem Start eine eigene HTTPS-Domain mit Reverse Proxy und WebSocket-Unterstützung einrichten; interner Zielport ist HTTP 8787.</Overview>
+  <Beta>true</Beta>
+  <MinVer>6.12.0</MinVer>
+  <Shell>sh</Shell>
+  <TemplateURL>https://raw.githubusercontent.com/ZUMBYTE-AppSolution/zumbyte-remote-release/main/templates/zumbyte-remote.xml</TemplateURL>
+  <ReadMe>https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/blob/main/docs/UNRAID.md</ReadMe>
+  <ExtraSearchTerms>remote desktop fernwartung serverdesk zumbyte selfhosted</ExtraSearchTerms>
+  <Screenshot>https://raw.githubusercontent.com/ZUMBYTE-AppSolution/zumbyte-remote-release/main/assets/screenshots/windows-dienst.png</Screenshot>
+  <Category>Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:8787]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/ZUMBYTE-AppSolution/zumbyte-remote-release/main/assets/app-icon.png</Icon>
+  <ExtraParams>--init --user=99:100 --read-only --tmpfs /tmp:rw,noexec,nosuid,size=16m --cap-drop=ALL --security-opt=no-new-privileges:true</ExtraParams>
+  <PostArgs></PostArgs>
+  <Config Name="Web-Port" Target="8787" Default="8787" Mode="tcp" Description="HTTP hinter deinem HTTPS-Reverse-Proxy" Type="Port" Display="always" Required="true" Mask="false">8787</Config>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/zumbyte-remote" Mode="rw" Description="Dauerhafte Konten, Geräteschlüssel und Protokolle. Ordner muss UID 99 / GID 100 gehören." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/zumbyte-remote</Config>
+  <Config Name="Öffentliche Adresse" Target="PUBLIC_URL" Default="" Mode="" Description="Eigene HTTPS-Adresse einschließlich https://, ohne Unterpfad. Der Reverse Proxy muss auf HTTP-Port 8787 zeigen." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="LAN-HTTP für Tests erlauben" Target="ALLOW_INSECURE_HTTP" Default="false" Mode="" Description="Nur im isolierten Testnetz einschalten; für echten Zugriff HTTPS verwenden" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Automatische Anwendungsupdates" Target="AUTO_UPDATE" Default="true" Mode="" Description="Signierte Releases ohne GitHub-API prüfen und die Serveranwendung im Datenordner aktualisieren" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="TURN-Adressen" Target="TURN_URLS" Default="" Mode="" Description="Optional, z.B. turn:turn.example.de:3478?transport=udp,turn:turn.example.de:3478?transport=tcp" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="TURN-Schlüssel" Target="TURN_SECRET" Default="" Mode="" Description="Gemeinsamer Schlüssel deines coturn-Servers für zeitlich begrenzte Zugangsdaten" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Zeitzone" Target="TZ" Default="Europe/Berlin" Mode="" Type="Variable" Display="advanced" Required="false" Mask="false">Europe/Berlin</Config>
+</Container>

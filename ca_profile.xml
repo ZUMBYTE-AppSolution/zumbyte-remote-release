@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommunityApplications>
+  <Profile>Zumbyte – AppSolution. Hier findest du den selbst betriebenen Server für Zumbyte Remote und die passende Unraid-Vorlage. Downloads, Einrichtung und bekannte Einschränkungen stehen im Release-Repository. Fragen und Fehler bitte über die verlinkten GitHub-Issues melden.</Profile>
+  <Icon>https://raw.githubusercontent.com/ZUMBYTE-AppSolution/zumbyte-remote-release/main/assets/app-icon.png</Icon>
+  <WebPage>https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release</WebPage>
+  <Forum>https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues</Forum>
+</CommunityApplications>
