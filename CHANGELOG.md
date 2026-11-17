@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0-alpha.2 · 17. November 2026
+
+- Windows-App, Hintergrunddienst, Installer und Deinstallation sind digital signiert. Verifizierter Herausgeber: Andreas Zumbansen.
+- Installer mit Desktopverknüpfung und portable Windows-Ausgabe.
+- Gerätezuordnungen und geschützte Profile bleiben bei Updates erhalten.
+- Weiterhin automatische Updateprüfung ohne GitHub-Konto oder GitHub-API.
+
+Diese Ausgabe enthält Windows-Pakete und das passende Serverpaket. Mac-Pakete und das fertige Docker-Image bleiben bei Alpha 1.
+
 ## 0.3.0-alpha.1 · 12. November 2026
 
 - Mac-Pakete für Apple Silicon und Intel, native Maus-/Tastatursteuerung und ein Benutzer-Hintergrunddienst.

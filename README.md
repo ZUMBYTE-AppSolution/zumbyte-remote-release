@@ -1,27 +1,27 @@
 <p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="Zumbyte Remote"></p>
-<h1 align="center">Zumbyte Remote</h1>
+<h1 align="center">zRemote</h1>
 <p align="center">Deine Computer über deinen eigenen Server erreichen.</p>
-<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.1">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
+<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.2">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
 
 Melde dich an deinem eigenen Server an und öffne einen Computer aus deiner Geräteliste. Für jedes Gerät wählst du, ob eine Person vor Ort bestätigen muss, deine zentrale Anmeldung genügt oder ein zusätzliches Gerätepasswort nötig ist.
 
-**0.3.0-alpha.1** bringt Mac-Pakete, Hintergrundbetrieb, Vollbild mit einklappbarer Steuerleiste und Kopieren/Einfügen von Text und Dateien. Zuerst den Server, danach die beteiligten Desktop-Apps und Windows-Dienste aktualisieren.
+**0.3.0 Alpha 2 für Windows** ist digital signiert. Der Installer, die App und der Hintergrunddienst zeigen **Andreas Zumbansen** als verifizierten Herausgeber an. Gespeicherte Computer, Profile und Dienstzuordnungen bleiben bei Updates erhalten. Für Mac und das fertige Docker-Image bleibt Alpha 1 verfügbar.
 
 ## Herunterladen
 
 | Für … | Download |
 |---|---|
-| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Setup-0.3.0-alpha.1-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Portable-0.3.0-alpha.1-windows-x64.zip) |
+| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/ZumbyteRemote-Setup-0.3.0-alpha.2-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/ZumbyteRemote-Portable-0.3.0-alpha.2-windows-x64.zip) |
 | Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Setup-0.3.0-alpha.1-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-0.3.0-alpha.1-macos-arm64.dmg) |
 | Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Setup-0.3.0-alpha.1-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-0.3.0-alpha.1-macos-x64.dmg) |
 | Docker / Unraid | Öffentliches Image: `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1` · [Einrichtung](docs/UNRAID.md) |
 | Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.1.zip) |
-| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Server-0.3.0-alpha.1.tar.gz) |
+| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/ZumbyteRemote-Server-0.3.0-alpha.2.tar.gz) |
 | Imageimport / eigener Containerbau | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-DockerImage-0.3.0-alpha.1-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.1.zip) |
 
-[Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
+[Prüfsummen für Alpha 2](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
 
-Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer. Windows-Pakete haben noch keine Authenticode-Signatur; die Mac-Pakete sind noch nicht mit einer Apple-Developer-ID signiert oder notarisiert. Die integrierte Updateprüfung prüft ihre eigene Signatur und SHA-256. Mac-Berechtigungen und Fernsteuerung benötigen noch Praxistests auf echten Macs.
+Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer. Die Windows-Pakete ab Alpha 2 sind digital signiert. Die Mac-Pakete sind weiterhin nicht mit einer Apple-Developer-ID signiert oder notarisiert. Die integrierte Updateprüfung prüft ihre eigene Signatur und SHA-256. Mac-Berechtigungen und Fernsteuerung benötigen noch Praxistests auf echten Macs.
 
 ## Die App
 
