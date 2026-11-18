@@ -1,12 +1,12 @@
-# Zumbyte Remote auf dem Mac
+# zRemote auf dem Mac
 
-Ab 0.3.0-alpha.1 gibt es Pakete für Apple Silicon (`arm64`) und Intel (`x64`). macOS 13 oder neuer wird benötigt. Die Mac-Fernsteuerung ist neu und benötigt noch Praxistests auf echten Macs.
+zRemote gibt es für Apple Silicon (`arm64`) und Intel (`x64`). macOS 13 oder neuer wird benötigt.
 
 ## Installieren
 
 Das passende PKG aus dem offiziellen Release herunterladen und öffnen. Es installiert `ZumbyteRemote.app` im Programme-Ordner. Alternativ die App aus dem DMG nach **Programme** ziehen. Danach die eigene HTTPS-Serveradresse eintragen und anmelden.
 
-Die Alpha besitzt noch keine Apple-Developer-ID und keine Apple-Notarisierung. macOS kann deshalb eine Freigabe unter **Systemeinstellungen → Datenschutz & Sicherheit** verlangen. Das Paket nicht aus unbekannten Downloadquellen beziehen. Es werden keine macOS-Sicherheitsfunktionen abgeschaltet.
+Ab 0.3.0-alpha.3 sind die App und der PKG-Installer mit Developer ID signiert und von Apple notarisiert. Das passende Paket findest du im offiziellen [zRemote-Release](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases).
 
 ## Bildschirm und Steuerung freigeben
 

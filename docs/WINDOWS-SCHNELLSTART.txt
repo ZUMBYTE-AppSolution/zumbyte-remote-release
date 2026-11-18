@@ -1,35 +1,46 @@
-Zumbyte Remote 0.3.0-alpha.1
+zRemote 0.3.0 Alpha 3
 
-1. Windows-Installer aus dem offiziellen Release-Repository starten.
-2. Danach die Desktopverknüpfung "Zumbyte Remote" öffnen.
-3. Eigene HTTPS-Serveradresse eintragen und zentral anmelden.
-4. Für Zugriff in einer offenen Sitzung: "Dieser Computer" zuordnen.
-5. Für Zugriff ohne offene App: "Windows-Dienst einrichten" auswählen.
-   Windows fragt einmal nach Administratorrechten.
-6. Beim Dienstgerät unter dem Zahnrad "Mein Konto" oder ein zusätzliches
-   Gerätepasswort einstellen. Die Voreinstellung verlangt lokale Bestätigung.
-7. Gerät auf einem anderen Computer auswählen und "Bildschirm öffnen".
-   Jede Verbindung öffnet ein eigenes Fenster. Oben Monitor und Bildqualität
-   wählen. "Scharf" nutzt die Originalauflösung, "1:1" die Originalgröße.
-   Ins Bild klicken, um Maus und Tastatur zu verwenden. Zum Freigeben neben
-   das Bild klicken oder "Steuern" abschalten.
+Einrichten
+1. Den Windows-Installer starten und danach die Desktopverknüpfung zRemote öffnen.
+2. Die eigene HTTPS-Serveradresse eintragen und anmelden.
+3. Unter „Dieser Computer“ den Windows-Dienst einrichten. Windows fragt dabei
+einmal nach Administratorrechten.
+4. Beim Dienstgerät über das Zahnrad den gewünschten Zugriff auswählen.
+„Mein Konto“ erlaubt den Zugriff über das angemeldete Konto ohne zusätzliche
+Bestätigung am Gerät. Ein zusätzliches Gerätepasswort ist ebenfalls möglich.
 
+Verbinden
+Ein Gerät auswählen und „Bildschirm öffnen“ anklicken. Jede Verbindung öffnet
+ein eigenes Fenster. Ins übertragene Bild klicken, um Maus und Tastatur zu
+verwenden. Pos1 / Home gibt beides auf dem steuernden Computer wieder frei.
+
+Die Steuerleiste erscheint am oberen Bildschirmrand. Sie blendet sich selbst
+aus und erscheint wieder, wenn die Maus den Rand mittig erreicht. Mit der
+Stecknadel bleibt sie sichtbar; am Griff lässt sie sich verschieben.
+
+Unter „Darstellung und Qualität“ lässt sich die tatsächliche Bildschirmauflösung
+des entfernten Windows-Computers automatisch an das Fenster anpassen, auch im
+Vollbild. zRemote wählt eine unterstützte Auflösung. Beim Trennen wird die
+vorherige Auflösung wiederhergestellt. „Scharf“ überträgt das Bild möglichst
+detailreich; „Wenig Daten“ hilft bei langsameren Verbindungen.
+
+Bei einem Verbindungsabbruch wird automatisch erneut verbunden. Der Countdown
+zeigt den nächsten Versuch. „Verbindung trennen“ oder das Schließen des Fensters
+beendet weitere Versuche.
+
+Zugriff vor der Windows-Anmeldung
 Der Dienst startet mit Windows. Er benötigt kein gespeichertes Windows-Kennwort.
-Falls Windows eine Anmeldung verlangt, werden die Windows-Anmeldedaten direkt
-am übertragenen Anmeldebildschirm eingegeben. Zentrales Login und Windows-
-Anmeldung bleiben getrennt.
+Wenn Windows eine Anmeldung verlangt, werden die Windows-Zugangsdaten direkt am
+übertragenen Anmeldebildschirm eingegeben. Auch die Benutzerkontensteuerung wird
+über den Dienst übertragen. Das zentrale zRemote-Konto ersetzt keine
+Windows-Anmeldung.
 
-Unter "Updates" neue Versionen prüfen und den geprüften Installer starten.
-Die Prüfung verwendet Release-Feed und direkte Dateien, keine GitHub-API.
-Signatur und SHA-256 werden vor der Installation geprüft.
+Updates
+Unter „Updates“ nach neuen Versionen suchen und den geprüften Installer starten.
+Gerätezuordnung und geschützte Einstellungen bleiben erhalten. Die Suche nutzt
+den GitHub-Release-Feed und direkte Dateien. Eine GitHub-API oder ein GitHub-Token
+ist dafür nicht nötig.
 
-Die Version ist eine Alpha und derzeit nicht Authenticode-signiert. Die
-Desktop-App und der Windows-Dienst haben eigene feste Geräteeinträge.
-Text und Dateien lassen sich in beiden Richtungen kopieren und einfügen.
-Ordner werden noch nicht übertragen. Für die neuen Funktionen zuerst den
-Server und anschließend beide beteiligten Desktop-Apps/Dienste aktualisieren.
-Beim Schließen des Hauptfensters läuft die App im Infobereich weiter.
-
-Eine Deinstallation entfernt App, Verknüpfungen und Dienst. Vorhandene Profile
-und Dienstzuordnungen werden für eine mögliche Wiederinstallation erhalten.
-Gerätezugriff kann jederzeit in der zentralen Geräteliste widerrufen werden.
+Windows-Programme, Hilfsprozesse und Installer werden mit Microsoft Artifact
+Signing signiert. Herausgeber des derzeit verwendeten Zertifikats ist
+Andreas Zumbansen. Die Version ist weiterhin eine Alpha.

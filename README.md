@@ -1,27 +1,27 @@
 <p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="Zumbyte Remote"></p>
 <h1 align="center">zRemote</h1>
 <p align="center">Deine Computer über deinen eigenen Server erreichen.</p>
-<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.2">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
+<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.3">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
 
 Melde dich an deinem eigenen Server an und öffne einen Computer aus deiner Geräteliste. Für jedes Gerät wählst du, ob eine Person vor Ort bestätigen muss, deine zentrale Anmeldung genügt oder ein zusätzliches Gerätepasswort nötig ist.
 
-**0.3.0 Alpha 2 für Windows** ist digital signiert. Der Installer, die App und der Hintergrunddienst zeigen **Andreas Zumbansen** als verifizierten Herausgeber an. Gespeicherte Computer, Profile und Dienstzuordnungen bleiben bei Updates erhalten. Für Mac und das fertige Docker-Image bleibt Alpha 1 verfügbar.
+**0.3.0 Alpha 3** passt die Auflösung des entfernten Windows-Bildschirms an dein Fenster an und verbindet sich nach Unterbrechungen automatisch neu. Windows-App, Dienst und Installer sind digital signiert; Herausgeber ist **Andreas Zumbansen**. Die Mac-Pakete sind mit Developer ID signiert und von Apple notarisiert. Gespeicherte Computer, Profile und Dienstzuordnungen bleiben bei Updates erhalten.
 
 ## Herunterladen
 
 | Für … | Download |
 |---|---|
-| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/ZumbyteRemote-Setup-0.3.0-alpha.2-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/ZumbyteRemote-Portable-0.3.0-alpha.2-windows-x64.zip) |
-| Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Setup-0.3.0-alpha.1-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-0.3.0-alpha.1-macos-arm64.dmg) |
-| Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Setup-0.3.0-alpha.1-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-0.3.0-alpha.1-macos-x64.dmg) |
+| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-Setup-0.3.0-alpha.3-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-Portable-0.3.0-alpha.3-windows-x64.zip) |
+| Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-Setup-0.3.0-alpha.3-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-0.3.0-alpha.3-macos-arm64.dmg) |
+| Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-Setup-0.3.0-alpha.3-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-0.3.0-alpha.3-macos-x64.dmg) |
 | Docker / Unraid | Öffentliches Image: `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1` · [Einrichtung](docs/UNRAID.md) |
 | Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.1.zip) |
-| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/ZumbyteRemote-Server-0.3.0-alpha.2.tar.gz) |
+| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/ZumbyteRemote-Server-0.3.0-alpha.3.tar.gz) |
 | Imageimport / eigener Containerbau | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-DockerImage-0.3.0-alpha.1-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.1.zip) |
 
-[Prüfsummen für Alpha 2](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.2/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
+[Prüfsummen für Alpha 3](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.3/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
 
-Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer. Die Windows-Pakete ab Alpha 2 sind digital signiert. Die Mac-Pakete sind weiterhin nicht mit einer Apple-Developer-ID signiert oder notarisiert. Die integrierte Updateprüfung prüft ihre eigene Signatur und SHA-256. Mac-Berechtigungen und Fernsteuerung benötigen noch Praxistests auf echten Macs.
+Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer; für Bildschirmübertragung und Steuerung sind die macOS-Freigaben für Bildschirmaufnahme und Bedienungshilfen nötig. Die integrierte Updateprüfung verwendet signierte Updatebeschreibungen und SHA-256. Das fertige Docker-Image bleibt bei Alpha 1; der Server kann sein Laufzeitpaket selbst aktualisieren.
 
 ## Die App
 
@@ -53,7 +53,7 @@ Weitere Konten werden unter **Benutzer** angelegt. Jedes Konto sieht seine eigen
 
 Jede Verbindung öffnet ein eigenes Fenster. Ins Bild klicken, um zu steuern. **Pos1 / Home** gibt Maus und Tastatur lokal frei. Der Monitorplan zeigt die Anordnung der Bildschirme mit Nummern; ein Klick wechselt den Monitor. Mit dem Pfeil geht es zum nächsten Bildschirm.
 
-**Vollbild** verwendet ein eigenes Vollbildfenster mit schwebender einklappbarer Leiste. Dort stehen Monitorwahl, Auflösungsgrenze, Bildqualität, 1:1, Zwischenablage, Dateien und Trennen bereit. Die Auflösungsgrenze verändert die Übertragung, nicht die Anzeigeeinstellung des Zielcomputers.
+**Vollbild** verwendet ein eigenes Vollbildfenster mit schwebender einklappbarer Leiste. Dort stehen Monitorwahl, Auflösungsgrenze, Bildqualität, 1:1, Zwischenablage, Dateien und Trennen bereit. Mit **Bildschirm an Fenster anpassen** wird die tatsächliche Auflösung des entfernten Computers auf den nächstpassenden unterstützten Modus gesetzt. Dafür muss auf dem Zielcomputer zRemote 0.3.0 Alpha 3 oder neuer laufen. Die separate Auflösungsgrenze begrenzt nur die Übertragung.
 
 In den aktuellen Desktop-Apps lassen sich **Text und mehrere Dateien in beide Richtungen** kopieren und einfügen. Strg+C/V beziehungsweise Cmd+C/V verwenden oder die Schaltflächen in der Leiste wählen. **Dateien senden** öffnet eine Dateiauswahl. Fortschritt und Fehler werden im Verbindungsfenster angezeigt. Ordner werden noch nicht übertragen. Die Zwischenablage ist für die angemeldete Desktop-Sitzung vorgesehen.
 
@@ -85,7 +85,7 @@ Unter **Updates** wird das passende Installationspaket gestartet. Profile und Ge
 
 ## ServerDesk
 
-Das [Remote-Plugin für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins) ist als eigenes Downloadpaket erhältlich. Es benötigt eine kompatible ServerDesk-Version. Die Integration in ServerDesk ist noch nicht abschließend geprüft.
+Das [Remote-Plugin für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins) ist als eigenes Downloadpaket erhältlich. Für separate Verbindungsfenster, native Eingaben und Vollbild empfehlen wir ServerDesk ab 0.2.0 Beta 26 und das zRemote-Plugin ab 0.3.0 Alpha 5.
 
 Dies bleibt eine Alpha. Native Linux-Desktopsteuerung, Ordnerübertragung, MFA und weitere Praxistests stehen aus. Die Lizenz für Vorlagen und Dokumentation gilt nicht automatisch für die heruntergeladenen Anwendungsdateien.
 

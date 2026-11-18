@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0-alpha.3 · 18. November 2026
+
+- Die Bildschirmauflösung des entfernten Windows-Computers passt sich auf Wunsch an das Verbindungsfenster und an Vollbild an. Gewählt wird die nächstpassende unterstützte Auflösung; beim Trennen wird die vorherige Einstellung wiederhergestellt.
+- Bei einem Verbindungsabbruch oder einem fehlgeschlagenen Aufbau wird die Verbindung automatisch erneut versucht. Ein Countdown zeigt die Zeit bis zum nächsten Versuch.
+- Die angepinnte Steuerleiste schließt oben oder unten bündig mit dem Bildschirmrand ab.
+- Die neuen Bedienelemente stehen auch im zRemote-Plugin für ServerDesk bereit.
+- Die Mac-App und die Installer für Apple Silicon und Intel sind mit Developer ID signiert und von Apple notarisiert.
+
 ## 0.3.0-alpha.2 · 17. November 2026
 
 - Windows-App, Hintergrunddienst, Installer und Deinstallation sind digital signiert. Verifizierter Herausgeber: Andreas Zumbansen.
