@@ -1,18 +1,18 @@
-# Zumbyte Remote in Community Apps einreichen
+# zRemote in Community Apps einreichen
 
 Das öffentliche Repository ist `https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release`.
 
 | Datei | Zweck |
 |---|---|
 | `ca_profile.xml` | Beschreibung und Support des Anbieters im Repository-Stamm |
-| `templates/zumbyte-remote.xml` | Eine Docker-Vorlage für Zumbyte Remote |
+| `templates/zumbyte-remote.xml` | Eine Docker-Vorlage für zRemote |
 | `LICENSE` | MIT-Lizenz für XML-Vorlagen und Repository-Dokumentation; keine Umlizenzierung der Anwendung |
 | `assets/app-icon.png` | App- und Repository-Icon |
 | `docs/UNRAID.md` | Einrichtung, HTTPS, Datenverzeichnis und Updates |
 
-Die XML verwendet ein festes GHCR-Versionstag, Port 8787, Appdata unter `/data`, UID 99/GID 100 und einen Container ohne Privilegien oder Docker-Socket. Die eigene HTTPS-Adresse muss beim Installieren eingetragen werden. Die Netzwerkauswahl kann in Unraid auf eine eigene br0-Adresse geändert werden; die bestehende Container-IP wird durch eine neue Vorlage nicht geändert.
+Die XML verwendet den fortlaufenden GHCR-Kanal `:alpha`, Port 8787, Appdata unter `/data`, UID 99/GID 100 und einen Container ohne Privilegien oder Docker-Socket. Die eigene HTTPS-Adresse muss beim Installieren eingetragen werden. Die Netzwerkauswahl kann in Unraid auf eine eigene br0-Adresse geändert werden; die bestehende Container-IP wird durch eine neue Vorlage nicht geändert.
 
-Vor der Einreichung muss das Containerpaket öffentlich sein und anonym von GHCR geladen werden können. Ein erfolgreicher Build allein reicht dafür nicht. Bei einer neuen Node.js-/Linux-Basis die Vorlage auf ein neues geprüftes Image-Tag aktualisieren. Die Anwendung im Container kann ihre signierten Updates weiterhin ohne GitHub-API laden.
+Vor der Einreichung muss das Containerpaket öffentlich sein und anonym von GHCR geladen werden können. Ein erfolgreicher Build allein reicht dafür nicht. Neue geprüfte Images werden unter `:alpha` bereitgestellt und lassen sich über Unraids Dockerverwaltung aktualisieren. Zusätzlich steht jedes Image unter einem festen Versionstag bereit. Die Anwendung im Container kann ihre signierten Updates weiterhin ohne GitHub-API laden.
 
 ## Einreichen
 

@@ -2,6 +2,10 @@
 
 ## 0.3.0-alpha.5 · 19. November 2026
 
+- Das Docker-Image für Unraid enthält Alpha 5 und lässt sich über den Kanal `:alpha` direkt im Docker-Tab aktualisieren.
+- Aktualisierte Community-Apps-Vorlage mit erhaltenen Appdata-Einstellungen und optionalen zusätzlichen Serverupdates.
+- Die Serveroberfläche zeigt Downloadgeschwindigkeit, Restzeit und die im Container enthaltene Version.
+
 - Der Mac-Installer schließt die Installation wieder vollständig ab und öffnet anschließend die App.
 - Gespeicherte Zugänge aus älteren Mac-Versionen werden nach der Umbenennung zu zRemote übernommen.
 - Ein zuvor eingerichteter Mac-Hintergrunddienst wird nach dem Update wieder gestartet.

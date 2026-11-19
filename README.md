@@ -14,14 +14,14 @@ Melde dich an deinem eigenen Server an und öffne einen Computer aus deiner Ger�
 | Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Setup-0.3.0-alpha.5-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Portable-0.3.0-alpha.5-windows-x64.zip) |
 | Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Setup-0.3.0-alpha.5-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-0.3.0-alpha.5-macos-arm64.dmg) |
 | Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Setup-0.3.0-alpha.5-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-0.3.0-alpha.5-macos-x64.dmg) |
-| Docker / Unraid | Öffentliches Image: `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1` · [Einrichtung](docs/UNRAID.md) |
-| Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.1.zip) |
+| Docker / Unraid | Öffentliches Image: `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` · [Einrichtung](docs/UNRAID.md) |
+| Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.5.zip) |
 | Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Server-0.3.0-alpha.5.tar.gz) |
-| Imageimport / eigener Containerbau | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-DockerImage-0.3.0-alpha.1-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.1.zip) |
+| Imageimport / Containerkonfiguration | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-DockerImage-0.3.0-alpha.5-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.5.zip) |
 
 [Prüfsummen für Alpha 5](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
 
-Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer; für Bildschirmübertragung und Steuerung sind die macOS-Freigaben für Bildschirmaufnahme und Bedienungshilfen nötig. Die integrierte Updateprüfung verwendet signierte Updatebeschreibungen und SHA-256. Das fertige Docker-Image bleibt bei Alpha 1; der Server kann sein Laufzeitpaket selbst aktualisieren.
+Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer; für Bildschirmübertragung und Steuerung sind die macOS-Freigaben für Bildschirmaufnahme und Bedienungshilfen nötig. Die integrierte Updateprüfung verwendet signierte Updatebeschreibungen und SHA-256. Das Docker-Image enthält ebenfalls Alpha 5 und lässt sich über den Kanal `:alpha` direkt in Unraid aktualisieren.
 
 ## Die App
 
@@ -70,7 +70,7 @@ Die native Tastaturübernahme gilt für die fokussierte Desktop-Verbindung. Betr
 Das Image kann ohne Anmeldung geladen werden:
 
 ```sh
-docker pull ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1
+docker pull ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha
 ```
 
 Konten, Geräte und Anwendungsupdates bleiben im Appdata-Ordner. Der Container benötigt weder privilegierten Modus noch Docker-Socket. Die Vorlage erlaubt auch eine eigene br0-Adresse; bestehende IP-Adressen werden nicht geändert. [Unraid-Anleitung](docs/UNRAID.md).
@@ -81,7 +81,7 @@ Für Community Apps liegen **[ca_profile.xml](ca_profile.xml)** und **[templates
 
 App und Server lesen den öffentlichen GitHub-Release-Feed und laden die passenden Dateien direkt. Dafür sind weder GitHub-API noch GitHub-Token nötig. Vor der Installation werden Signatur, Größe und SHA-256 geprüft.
 
-Unter **Updates** wird das passende Installationspaket gestartet. Profile und Gerätezuordnung bleiben erhalten. Die Containeranwendung kann neue Versionen automatisch übernehmen; `AUTO_UPDATE` ist in der Vorlage umschaltbar. Änderungen der Linux-/Node.js-Basis kommen über ein neues Containerimage. [Update-Anleitung](docs/UPDATES.md).
+Unter **Updates** wird das passende Installationspaket gestartet. Profile und Gerätezuordnung bleiben erhalten. Unraid aktualisiert über den Kanal `:alpha` das gesamte Containerimage. Zusätzliche automatische Serverupdates sind mit `AUTO_UPDATE` einschaltbar. [Update-Anleitung](docs/UPDATES.md).
 
 ## ServerDesk
 

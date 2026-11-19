@@ -1,77 +1,77 @@
-# Zumbyte Remote auf Unraid
+# zRemote auf Unraid
 
-Version 0.3.0-alpha.1. Alle Pakete stehen unter [Downloads](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases).
+Das Containerimage enthält **0.3.0 Alpha 5** mit Downloadfortschritt für Serverupdates. [Downloads](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.5)
 
-## 1. Container direkt laden
+## Vorhandenen Container umstellen
 
-Das öffentliche Image lässt sich ohne Anmeldung laden:
+1. In Unraid unter **Docker** den zRemote-Container bearbeiten.
+2. Im Feld **Repository** genau `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` eintragen.
+3. Netzwerk, feste IP, Appdata-Pfad und eigene Einstellungen beibehalten. Bei einer eigenen br0-Adresse bleibt diese Adresse bestehen.
+4. **Anwenden** wählen. Unraid lädt das Image und erstellt den Container mit demselben Datenordner neu.
+
+Danach laufen weitere Imageupdates über **Docker → Auf Updates prüfen → Update**. Der Kanal **alpha** zeigt jeweils auf das neue geprüfte Alpha-Image. Ein festes Versionstag wie `:0.3.0-alpha.5` und ein nur lokal importiertes Image verfolgen diesen Kanal nicht.
+
+Konten, Computer und Gerätezuordnungen bleiben im vorhandenen Appdata-Ordner. Diesen Ordner nicht löschen und keine neue Ersteinrichtung starten. Vor dem Umstieg empfiehlt sich eine Sicherung bei gestopptem Container.
+
+## Neu installieren
+
+Das öffentliche Image benötigt keine Anmeldung:
 
 ```sh
-docker pull ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1
+docker pull ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha
 mkdir -p /mnt/user/appdata/zumbyte-remote
 chown 99:100 /mnt/user/appdata/zumbyte-remote
 chmod 700 /mnt/user/appdata/zumbyte-remote
 ```
 
-Der Download braucht keinen GitHub-Token. Das Appdata-Verzeichnis wird unabhängig vom Image erhalten. Für ein schon vorhandenes Datenverzeichnis dessen Inhalt und Rechte prüfen; die Befehle löschen keine Daten.
+Bei einem vorhandenen Datenordner dessen Inhalt und Rechte prüfen. Die Befehle löschen keine Daten.
 
-Falls du ohne Registry arbeiten möchtest, liegt im Release weiterhin das fertige Imagearchiv. Mit `docker load --input ZumbyteRemote-DockerImage-0.3.0-alpha.1-linux-amd64.tar.gz` importieren. Dieses Archiv verwendet den lokalen Imagenamen `zumbyte-remote-server:0.3.0-alpha.1`; dann diesen Namen im Feld **Repository** der Vorlage eintragen.
-
-## 2. Unraid-Vorlage verwenden
-
-1. `templates/zumbyte-remote.xml` aus dem öffentlichen Repository oder `deploy/unraid/zumbyte-remote.xml` aus dem Docker-Paket als `/boot/config/plugins/dockerMan/templates-user/my-zumbyte-remote.xml` ablegen.
+1. [Die Unraid-Vorlage](../templates/zumbyte-remote.xml) als `/boot/config/plugins/dockerMan/templates-user/my-zumbyte-remote.xml` ablegen.
 2. Unter **Docker → Container hinzufügen** die Vorlage **zumbyte-remote** wählen.
-3. **Öffentliche Adresse** auf die eigene HTTPS-Domain setzen, z. B. `https://remote.meine-domain.de`.
-4. Port 8787 und Appdata-Pfad kontrollieren. Die Vorlage verwendet UID 99/GID 100.
-5. Den vorhandenen HTTPS-Reverse-Proxy auf `UNRAID-LAN-IP:8787` richten und WebSockets erlauben.
-6. Container starten und im Browser die konfigurierte HTTPS-Adresse öffnen. Den WebUI-Link bei Bedarf ebenfalls auf diese Domain setzen; der direkte HTTP-Portlink ist nur eine Erreichbarkeitsprüfung.
+3. Die eigene HTTPS-Adresse unter **Öffentliche Adresse** eintragen.
+4. Appdata und Port kontrollieren. Die Vorlage verwendet UID 99/GID 100, ein schreibgeschütztes Dateisystem und keine zusätzlichen Rechte.
+5. Den HTTPS-Reverse-Proxy auf **HTTP**, Container-IP und Port **8787** einstellen; WebSockets aktivieren. Bei bridge wird der veröffentlichte Port der Unraid-IP verwendet, bei br0 die eigene Container-IP.
+6. Für den direkten Verbindungsaufbau aus dem Internet zusätzlich UDP **3478** an den Container weiterleiten. Der Server stellt die Verbindung her; Bild, Eingaben und Dateien laufen direkt zwischen den Geräten. Ein eigener TURN-Relay ist nicht erforderlich und wird nicht als Ersatzverbindung benutzt.
 
-Es wird kein privilegierter Container und kein Docker-Socket benötigt. Die Dateien für Community Apps liegen unter `templates/` und als `ca_profile.xml` im Repository-Stamm. [Einreichung und alle benötigten Dateien](COMMUNITY-APPS.md). Der Katalogeintrag erfordert eine gesonderte Prüfung durch Community Apps.
+Der Container benötigt weder privilegierten Modus noch Docker-Socket. Der WebUI-Link öffnet den internen HTTP-Port; für die Einrichtung und den täglichen Zugriff die konfigurierte HTTPS-Adresse verwenden.
 
-## Alternative: Compose oder eigener Build
+## Erstes Konto und Geräte
 
-Das Docker-Paket enthält einen fertig vorbereiteten Anwendungsordner und ein Dockerfile. Im entpackten Paket bauen:
-
-```sh
-docker build -t zumbyte-remote-server:0.3.0-alpha.1 .
-cp deploy/.env.example deploy/.env
-docker compose --env-file deploy/.env -f deploy/compose.yaml up -d
-```
-
-Vorher Domain, Appdata, UID/GID und Bind-Adresse in `.env` anpassen. Bei einem Reverse Proxy in einem anderen Container die interne Unraid-IP als `ZR_BIND_ADDRESS` setzen; ein Proxy auf dem Host kann `127.0.0.1` verwenden. Ein Caddy-Beispiel liegt im Paket.
-
-## 3. Erstes Konto anlegen
-
-Einmaligen Einrichtungscode auslesen:
+Einrichtungscode auslesen:
 
 ```sh
 docker exec zumbyte-remote cat /data/setup-token.txt
 ```
 
-Auf der eigenen HTTPS-Adresse den Code eingeben und das erste Administratorkonto mit mindestens zwölf Zeichen Passwort anlegen. Es gibt keine voreingestellten Konten und keine öffentliche Registrierung. Nach der Einrichtung wird der Code gelöscht. Weitere Benutzer können unter **Benutzer** angelegt werden; jedes Konto sieht seine eigenen Geräte.
+Auf der eigenen HTTPS-Adresse den Code eingeben und das erste Administratorkonto mit einem Passwort aus mindestens zwölf Zeichen anlegen. Anschließend wird der Code gelöscht. Weitere Konten werden unter **Benutzer** angelegt; jedes Konto sieht seine eigenen Computer.
 
-## 4. Windows-Geräte zuordnen
+In der Desktop-App dieselbe Serveradresse eintragen und anmelden. Unter **Dieser Computer** die App oder den Hintergrunddienst zuordnen. Für Windows-Zugriff vor der Benutzeranmeldung den Systemdienst einrichten. Windows-Anmeldedaten werden nicht gespeichert.
 
-Windows-Installer starten, Serveradresse eintragen und anmelden. Unter **Dieser Computer** kann die App selbst oder der Windows-Systemdienst zugeordnet werden. Für Zugriff ohne offene App und vor der Windows-Benutzeranmeldung den Dienst verwenden.
+## Zwei Updatewege
 
-Neue Geräte verlangen standardmäßig lokale Bestätigung. Beim Dienstgerät unter dem Zahnrad **Mein Konto: ohne weiteres Passwort** oder ein zusätzliches Gerätepasswort einstellen. Diese Änderung verlangt das zentrale Anmeldepasswort. Windows-Anmeldedaten werden nicht gespeichert; sie werden bei Bedarf direkt am Windows-Anmeldebildschirm eingegeben.
+**Unraid aktualisiert das vollständige Image:** Im Docker-Tab auf Updates prüfen und das Update des zRemote-Containers ausführen. So werden auch Node.js, die Linux-Basis und der Updater erneuert. Der Downloadfortschritt erscheint im Unraid-Updatefenster.
 
-## Updates ohne GitHub-API
+**Die Serveroberfläche aktualisiert die Anwendung:** Unter **Updates → Eigener Server** lassen sich zusätzliche signierte Serverpakete installieren. Dabei werden Prozent, geladene Datenmenge, Geschwindigkeit und Restzeit angezeigt. Unterbrochene Downloads werden erneut versucht; Fehler bleiben sichtbar. Laufende Fernverbindungen verschieben den Austausch.
 
-`AUTO_UPDATE=true` ist im Container voreingestellt und in der Unraid-Vorlage umschaltbar. Der Launcher liest den GitHub-Release-Feed, prüft Signatur und SHA-256 und aktualisiert die Serveranwendung unter `/data/updates`. Der aktive Stand bleibt auch nach einem Containerneustart erhalten. Ein fehlerhafter Start führt zur vorherigen Laufzeit zurück. Laufende Fernverbindungen verhindern den Austausch, bis sie beendet sind.
+Neue Vorlagen verwenden `AUTO_UPDATE=false`; damit übernimmst du neue Images bewusst über Unraid. Mit `true` werden zusätzlich Anwendungsupdates automatisch geladen. Vorhandene Einstellungen bleiben beim Imagewechsel erhalten. Die Serveroberfläche zeigt auch die im Image enthaltene Version.
 
-Das aktualisiert die Anwendung im Container. Für eine neue Node.js-/Linux-Basis das neue öffentliche Image laden oder das Imagearchiv aus dem Release importieren und den Container mit demselben Appdata-Ordner ersetzen. Weder bei einem normalen Anwendungsupdate noch beim Imageaustausch muss jedes Gerät neu gekoppelt werden.
+Eine neuere oder gleich alte Imageversion ersetzt eine ältere gespeicherte Laufzeit. Eine bereits neuere Serverlaufzeit bleibt erhalten. Bei einem fehlgeschlagenen Anwendungsupdate startet wieder der vorherige Stand.
 
-Mit `AUTO_UPDATE=false` erfolgen Anwendungsupdates über **Updates → Eigener Server** in der Administratoroberfläche. Die Updateprüfung braucht keinen GitHub-Token und nutzt keine GitHub-API.
+Die Anwendung liest den öffentlichen Release-Feed und prüft Signatur und SHA-256. Unraid lädt öffentliche Images über die Containerregistry. Beides benötigt weder GitHub-Konto noch persönlichen Token; die GitHub-REST-API wird für laufende Updates nicht verwendet.
 
-## Netzwerk
+## Ohne Registry oder mit Compose
 
-Nach außen wird die HTTPS-Adresse des eigenen Reverse Proxys verwendet. Der interne HTTP-Port 8787 bleibt im eigenen Netz. Die Windows-Dienstverbindung transportiert Bild und Eingaben über diese Verbindung. Der normale App-Zielteil nutzt WebRTC und benötigt zwischen getrennten NAT-/Firewallnetzen gegebenenfalls einen eigenen TURN-Server. Beispiele und die Variablen `TURN_URLS`/`TURN_SECRET` liegen dem Paket bei.
+Das fertige Imagearchiv lässt sich mit `docker load --input ZumbyteRemote-DockerImage-0.3.0-alpha.5-linux-amd64.tar.gz` importieren. Es enthält das feste Versionstag. Für spätere Updates durch Unraid trotzdem den Kanal `:alpha` als Repository eintragen und einmal aus der Registry laden.
 
-Ein isolierter LAN-Test ist mit `PUBLIC_URL=http://UNRAID-IP:8787`, `ALLOW_INSECURE_HTTP=true` und in der Windows-App zusätzlich `ZR_ALLOW_HTTP=1` möglich. Für den regulären Betrieb HTTPS verwenden.
+Das Docker-Paket enthält Compose, Beispielkonfiguration und Unraid-Vorlage. In der entpackten Konfiguration Domain, Appdata, UID/GID und Bind-Adresse anpassen. Dann:
 
-## Sicherung und Wiederherstellung
+```sh
+docker compose --env-file .env -f compose.yaml pull
+docker compose --env-file .env -f compose.yaml up -d
+```
 
-Den Container für eine dateibasierte Sicherung stoppen und den gesamten Appdata-Ordner einschließlich `/updates` sichern. Bei Wiederherstellung denselben Ordner und passende UID/GID verwenden. Der Serverbackup enthält Geräte-IDs und öffentliche Schlüssel; private Windows-Geräteschlüssel bleiben auf den jeweiligen Computern geschützt gespeichert.
+## Sicherung
 
-Die Version bleibt eine Alpha; weitere Praxistests auf Unraid stehen aus.
+Für eine Dateisicherung den Container stoppen und den gesamten Appdata-Ordner einschließlich `updates` sichern. Bei Wiederherstellung denselben Ordner und dieselbe UID/GID verwenden. Private Geräteschlüssel bleiben auf den jeweiligen Computern.
+
+Die Dateien für Community Apps sind vorbereitet; die Aufnahme in den Katalog erfordert eine gesonderte Einreichung und Prüfung. [Community Apps](COMMUNITY-APPS.md)

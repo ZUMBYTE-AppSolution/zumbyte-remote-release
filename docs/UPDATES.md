@@ -33,15 +33,15 @@ Ein laufender Download wird auch bei langsamer Verbindung nicht nach drei Minute
 
 ## Server und Unraid
 
-Start über `apps/launcher/server.mjs`; der Container verwendet denselben Launcher. `AUTO_UPDATE=true` aktiviert automatische Anwendungsupdates. Bei `false` werden Updates über die Administratoroberfläche installiert. `/data/updates` muss dauerhaft beschreibbar sein.
+Das aktuelle öffentliche Image enthält **0.3.0 Alpha 5**, einschließlich Downloadfortschritt, Geschwindigkeit und Restzeit für Anwendungsupdates.
 
-Neue Laufzeiten liegen getrennt von Datenbank und Konten unter `/data/updates/runtimes`. Der Launcher prüft ihren Start und kehrt bei einem Fehlstart zur bisherigen Laufzeit zurück. Der aktive Pfad bleibt über Containerneustarts erhalten. Das Containerdateisystem braucht keine Schreibfreigabe, der Docker-Socket wird nicht benötigt.
+In Unraid als Repository **`ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha`** verwenden. Danach unter **Docker → Auf Updates prüfen → Update** das vollständige Image aktualisieren. Das erneuert auch Node.js, die Linux-Basis und den Updater. Feste Versionstags wechseln nicht automatisch zur nächsten Version. [Umstieg und Einrichtung](UNRAID.md).
 
-Das betrifft die Anwendung im Container. Für Änderungen der Node.js-/Linux-Basis ein neues Container-Image verwenden und denselben Appdata-Ordner erhalten.
+Die Administratoroberfläche bietet zusätzlich signierte Anwendungsupdates. `AUTO_UPDATE=true` installiert diese automatisch; mit `false` werden sie manuell unter **Updates → Eigener Server** gestartet. Neue Unraid-Vorlagen verwenden `false`. Vorhandene Einstellungen bleiben erhalten.
 
-Das öffentliche Containerimage bleibt vorerst bei **0.3.0 Alpha 1**. Die Anwendung darin kann ihr Serverpaket über die Updatefunktion aktualisieren.
+Konten, Geräte und Laufzeiten liegen dauerhaft in Appdata. Bei einem Imagewechsel wird die mitgelieferte Version verwendet, wenn sie gleich alt oder neuer ist. Eine bereits neuere signierte Serverlaufzeit bleibt erhalten. Ein fehlgeschlagenes Anwendungsupdate kehrt zum vorherigen Stand zurück.
 
-In bestehenden Alpha-1-Containern erscheint beim Laufzeitupdate zunächst nur der allgemeine Updatezustand. Der ausführliche Downloadfortschritt wird mit neu gebauten Containerimages bereitgestellt.
+Weder Docker-Socket noch privilegierter Modus sind nötig. App und Server verwenden öffentliche Release-Dateien; Unraid verwendet die öffentliche Containerregistry. Laufende Updates benötigen weder GitHub-REST-API noch persönlichen Token.
 
 ## ServerDesk-Plugin
 
