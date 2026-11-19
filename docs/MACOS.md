@@ -31,3 +31,11 @@ Jede Verbindung öffnet ein eigenes Fenster. Ins Bild klicken, um fernzusteuern.
 Unter **Updates** neue Versionen prüfen. Die App lädt das passende PKG direkt aus dem GitHub-Release und prüft Signatur sowie SHA-256. Vor dem Installieren Fernsitzungen beenden. Das Systeminstallationsprogramm führt das Update aus; ein eingerichteter Hintergrunddienst wird anschließend wiederhergestellt. Bei Abbruch des Installationsdialogs die bisherige App erneut öffnen, damit sie ihren Hintergrunddienst wiederherstellt.
 
 Ab **0.3.0 Alpha 5** zeigt die App Downloadfortschritt, Geschwindigkeit, Restzeit und sichtbare Fehlermeldungen. Falls eine ältere Version beim Update wiederholt abbricht, den passenden PKG-Installer einmal direkt von der Release-Seite herunterladen und öffnen. Einstellungen und gespeicherte Computer bleiben erhalten.
+
+## Chat und Darstellung ab Alpha 8
+
+Über die Sprechblase in der Steuerleiste öffnest du den Chat. Mit „Datei“ kannst du Anhänge senden; empfangene Dateien werden erst nach deiner Auswahl gespeichert. Aktualisiere dafür beide Geräte und den Remote-Server.
+
+Bei geöffnetem MacBook bleibt die Bildschirmauflösung bestehen. Der Deckel- und Sperrstatus wird getrennt geprüft. Wenn macOS eine Änderung nicht erlaubt, passt zRemote das Bild ohne Verzerrung ins Fenster ein. Ein virtueller Zusatzbildschirm wird dabei nicht angelegt.
+
+Qualität, Bildgröße, Ton, Mauszeiger und Steuerleiste werden pro Zielcomputer gespeichert. Unter „Darstellung“ setzt du nur die Einstellungen dieses Computers zurück.

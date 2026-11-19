@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0-alpha.8 · 19. November 2026
+
+- Direkt in der Verbindung chatten: eigene und empfangene Nachrichten haben unterschiedliche Sprechblasen, Links sind anklickbar und zugestellte Nachrichten werden gekennzeichnet.
+- Dateien im Chat senden, den Fortschritt verfolgen und empfangene Dateien gezielt speichern. Chat-Anhänge verändern die Zwischenablage nicht automatisch.
+- Bildqualität, Bildgröße, Monitor, Ton, Mauszeiger und die Position der Steuerleiste für jeden Computer separat speichern und auf Standard zurücksetzen.
+- Am Mac werden Deckel- und Sperrstatus getrennt geprüft. Bei geöffnetem Deckel, aktiver Sitzung oder abgelehntem Auflösungswechsel bleibt die Auflösung erhalten; das Bild wird unverzerrt eingepasst.
+- Sitzungen enden nach 90 Minuten. Danach startet keine automatische Wiederverbindung.
+- Der Windows-Systemdienst zeigt während der Freigabe ein einklappbares Fenster mit Chat und Trennen-Schaltfläche. Die Gegenstelle kann dieses Fenster nicht fernbedienen.
+
+Für den Chat beide Geräte und den Remote-Server aktualisieren. In ServerDesk werden das neue zRemote-Plugin und ServerDesk Beta 27 benötigt.
+
 ## 0.3.0-alpha.7 · 19. November 2026
 
 - Bei abgelehntem oder nicht unterstütztem Auflösungswechsel wird das vollständige Remote-Bild automatisch ins Fenster eingepasst, ohne es zu verzerren.
