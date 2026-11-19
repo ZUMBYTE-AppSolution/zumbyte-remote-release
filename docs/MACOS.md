@@ -24,6 +24,8 @@ Der Dienst arbeitet in der angemeldeten grafischen Benutzersitzung. Zugriff vor 
 
 ## Verbinden und aktualisieren
 
+Wenn macOS keinen passenden Auflösungswechsel erlaubt, wird ab Alpha 7 das vollständige Bild automatisch ins Fenster eingepasst. Das Seitenverhältnis bleibt erhalten, auch im Vollbild. Originalgröße · 1:1 bleibt manuell auswählbar. Die Automatik aus- und wieder einschalten, um einen Auflösungswechsel erneut zu versuchen.
+
 Jede Verbindung öffnet ein eigenes Fenster. Ins Bild klicken, um fernzusteuern. **Home/Pos1** gibt Maus und Tastatur lokal frei. Auf Mac-Tastaturen ohne Home entspricht das gewöhnlich **fn + Pfeil links**. Kopieren und Einfügen verwenden die Tastenkombination des Zielsystems, beim Mac also Cmd+C und Cmd+V. Text und einzelne oder mehrere Dateien werden unterstützt, Ordner noch nicht.
 
 Unter **Updates** neue Versionen prüfen. Die App lädt das passende PKG direkt aus dem GitHub-Release und prüft Signatur sowie SHA-256. Vor dem Installieren Fernsitzungen beenden. Das Systeminstallationsprogramm führt das Update aus; ein eingerichteter Hintergrunddienst wird anschließend wiederhergestellt. Bei Abbruch des Installationsdialogs die bisherige App erneut öffnen, damit sie ihren Hintergrunddienst wiederherstellt.

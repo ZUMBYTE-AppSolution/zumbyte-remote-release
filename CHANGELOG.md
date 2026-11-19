@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0-alpha.7 · 19. November 2026
+
+- Bei abgelehntem oder nicht unterstütztem Auflösungswechsel wird das vollständige Remote-Bild automatisch ins Fenster eingepasst, ohne es zu verzerren.
+- Die Anpassung gilt auch für Vollbild und das ServerDesk-Plugin. Die Originalauflösung des Bildes bleibt erhalten.
+- Nach einem abgelehnten Wechsel werden für diesen Monitor keine weiteren automatischen Auflösungswechsel angefordert. Aus- und Einschalten der Automatik erlaubt einen neuen Versuch.
+- Originalgröße · 1:1 bleibt als manuelle Ansicht verfügbar.
+
 ## 0.3.0-alpha.6 · 19. November 2026
 
 - Windows und Mac zeigen in der Seitenleiste die tatsächlich installierte App-Version.
