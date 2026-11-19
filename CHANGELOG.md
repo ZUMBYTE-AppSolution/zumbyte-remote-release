@@ -1,6 +1,15 @@
 # Changelog
 
+## 0.3.0-alpha.5 · 19. November 2026
+
+- Der Mac-Installer schließt die Installation wieder vollständig ab und öffnet anschließend die App.
+- Gespeicherte Zugänge aus älteren Mac-Versionen werden nach der Umbenennung zu zRemote übernommen.
+- Ein zuvor eingerichteter Mac-Hintergrunddienst wird nach dem Update wieder gestartet.
+- Downloadfortschritt, Geschwindigkeit, Restzeit, automatische Wiederholungen und sichtbare Fehlermeldungen sind enthalten.
+
 ## 0.3.0-alpha.4 · 19. November 2026
+
+Zurückgezogen wegen eines Fehlers beim Abschluss der Mac-Installation. Bitte Alpha 5 verwenden.
 
 - Updates zeigen Downloadfortschritt, Geschwindigkeit, Restzeit und die anschließende Paketprüfung.
 - Langsame Downloads werden nicht mehr nach drei Minuten abgebrochen.

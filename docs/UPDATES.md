@@ -19,13 +19,13 @@ Programme, Hintergrunddienst und Installer sind digital signiert. Windows zeigt 
 
 ## macOS
 
-Die App lädt den passenden PKG-Installer für Intel oder Apple Silicon. Zusätzlich zur Updatebeschreibung und SHA-256 werden ab Alpha 4 die Apple-Signatur und die Freigabe des Installers geprüft. App und Downloads sind mit Developer ID signiert und von Apple notarisiert.
+Die App lädt den passenden PKG-Installer für Intel oder Apple Silicon. Zusätzlich zur Updatebeschreibung und SHA-256 werden ab Alpha 5 die Apple-Signatur und die Freigabe des Installers geprüft. App und Downloads sind mit Developer ID signiert und von Apple notarisiert.
 
 Der macOS-Installer übernimmt die Installation in den Programme-Ordner. Ein eingerichteter Benutzer-Hintergrunddienst wird für die Aktualisierung angehalten und beim nächsten Appstart wiederhergestellt. Lässt sich der Installer nicht öffnen, läuft die vorhandene App weiter. Profile und Gerätezuordnung bleiben erhalten. [Mac-Anleitung](MACOS.md).
 
 **Ältere Mac-Version ohne Fortschrittsanzeige:** Wenn das Update wiederholt abbricht, lade den passenden PKG-Installer von der [Release-Seite](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases) und öffne ihn einmal direkt. Eine Deinstallation ist dafür nicht erforderlich.
 
-## Fortschritt und Fehler ab Alpha 4
+## Fortschritt und Fehler ab Alpha 5
 
 Neue zRemote-Builds zeigen den Downloadfortschritt mit Geschwindigkeit und geschätzter Restzeit. Danach folgt die Paketprüfung. Unterbrochene Downloads werden automatisch erneut versucht und nach Möglichkeit fortgesetzt. Ein Fehler bleibt mit einer Möglichkeit zum erneuten Versuch sichtbar.
 

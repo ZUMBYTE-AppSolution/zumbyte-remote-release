@@ -28,4 +28,4 @@ Jede Verbindung öffnet ein eigenes Fenster. Ins Bild klicken, um fernzusteuern.
 
 Unter **Updates** neue Versionen prüfen. Die App lädt das passende PKG direkt aus dem GitHub-Release und prüft Signatur sowie SHA-256. Vor dem Installieren Fernsitzungen beenden. Das Systeminstallationsprogramm führt das Update aus; ein eingerichteter Hintergrunddienst wird anschließend wiederhergestellt. Bei Abbruch des Installationsdialogs die bisherige App erneut öffnen, damit sie ihren Hintergrunddienst wiederherstellt.
 
-Ab **0.3.0 Alpha 4** zeigt die App Downloadfortschritt, Geschwindigkeit, Restzeit und sichtbare Fehlermeldungen. Falls eine ältere Version beim Update wiederholt abbricht, den passenden PKG-Installer einmal direkt von der Release-Seite herunterladen und öffnen. Einstellungen und gespeicherte Computer bleiben erhalten.
+Ab **0.3.0 Alpha 5** zeigt die App Downloadfortschritt, Geschwindigkeit, Restzeit und sichtbare Fehlermeldungen. Falls eine ältere Version beim Update wiederholt abbricht, den passenden PKG-Installer einmal direkt von der Release-Seite herunterladen und öffnen. Einstellungen und gespeicherte Computer bleiben erhalten.

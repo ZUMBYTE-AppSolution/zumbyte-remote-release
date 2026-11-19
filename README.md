@@ -1,27 +1,25 @@
 <p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="Zumbyte Remote"></p>
 <h1 align="center">zRemote</h1>
-
-**Alpha 4 wurde vorübergehend zurückgezogen. Die korrigierte Ausgabe für den Mac ist in Vorbereitung.**
 <p align="center">Deine Computer über deinen eigenen Server erreichen.</p>
-<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.4">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
+<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.5">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
 
 Melde dich an deinem eigenen Server an und öffne einen Computer aus deiner Geräteliste. Für jedes Gerät wählst du, ob eine Person vor Ort bestätigen muss, deine zentrale Anmeldung genügt oder ein zusätzliches Gerätepasswort nötig ist.
 
-**0.3.0 Alpha 4** zeigt beim Update den Downloadfortschritt mit Geschwindigkeit und Restzeit. Langsame Downloads laufen weiter, Unterbrechungen werden automatisch erneut versucht und Fehler bleiben sichtbar. Windows-App, Dienst und Installer sind digital signiert; Herausgeber ist **Andreas Zumbansen**. Die Mac-Pakete sind mit Developer ID signiert und von Apple notarisiert. Gespeicherte Computer, Profile und Dienstzuordnungen bleiben bei Updates erhalten.
+**0.3.0 Alpha 5** behebt den Installationsabbruch auf dem Mac und übernimmt gespeicherte Zugänge älterer Mac-Versionen. Updates zeigen Downloadfortschritt, Geschwindigkeit, Restzeit und sichtbare Fehlermeldungen. Windows-App, Dienst und Installer sind digital signiert; Herausgeber ist **Andreas Zumbansen**. Die Mac-Pakete sind mit Developer ID signiert und von Apple notarisiert. Gespeicherte Computer, Profile und Dienstzuordnungen bleiben bei Updates erhalten.
 
 ## Herunterladen
 
 | Für … | Download |
 |---|---|
-| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-Setup-0.3.0-alpha.4-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-Portable-0.3.0-alpha.4-windows-x64.zip) |
-| Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-Setup-0.3.0-alpha.4-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-0.3.0-alpha.4-macos-arm64.dmg) |
-| Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-Setup-0.3.0-alpha.4-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-0.3.0-alpha.4-macos-x64.dmg) |
+| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Setup-0.3.0-alpha.5-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Portable-0.3.0-alpha.5-windows-x64.zip) |
+| Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Setup-0.3.0-alpha.5-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-0.3.0-alpha.5-macos-arm64.dmg) |
+| Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Setup-0.3.0-alpha.5-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-0.3.0-alpha.5-macos-x64.dmg) |
 | Docker / Unraid | Öffentliches Image: `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:0.3.0-alpha.1` · [Einrichtung](docs/UNRAID.md) |
 | Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.1.zip) |
-| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/ZumbyteRemote-Server-0.3.0-alpha.4.tar.gz) |
+| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Server-0.3.0-alpha.5.tar.gz) |
 | Imageimport / eigener Containerbau | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-DockerImage-0.3.0-alpha.1-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.1/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.1.zip) |
 
-[Prüfsummen für Alpha 4](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.4/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
+[Prüfsummen für Alpha 5](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
 
 Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer; für Bildschirmübertragung und Steuerung sind die macOS-Freigaben für Bildschirmaufnahme und Bedienungshilfen nötig. Die integrierte Updateprüfung verwendet signierte Updatebeschreibungen und SHA-256. Das fertige Docker-Image bleibt bei Alpha 1; der Server kann sein Laufzeitpaket selbst aktualisieren.
 
