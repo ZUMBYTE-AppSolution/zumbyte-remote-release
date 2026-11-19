@@ -1,5 +1,7 @@
 <p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="Zumbyte Remote"></p>
 <h1 align="center">zRemote</h1>
+
+**Alpha 4 wurde vorübergehend zurückgezogen. Die korrigierte Ausgabe für den Mac ist in Vorbereitung.**
 <p align="center">Deine Computer über deinen eigenen Server erreichen.</p>
 <p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.4">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
 
