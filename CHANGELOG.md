@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0-alpha.4 · 19. November 2026
+
+- Updates zeigen Downloadfortschritt, Geschwindigkeit, Restzeit und die anschließende Paketprüfung.
+- Langsame Downloads werden nicht mehr nach drei Minuten abgebrochen.
+- Nach einer Unterbrechung wird automatisch erneut versucht; vorhandene Daten werden nach Möglichkeit weiterverwendet.
+- Fehlermeldungen bleiben sichtbar und bieten einen erneuten Versuch an.
+- Der Mac-Installer wird vor dem Öffnen auf Apple-Signatur und Freigabe geprüft. Schlägt das Öffnen fehl, bleibt die App erreichbar.
+- Die neue Updateanzeige ist auch im Server enthalten, einschließlich Docker und Unraid.
+
 ## 0.3.0-alpha.3 · 18. November 2026
 
 - Die Bildschirmauflösung des entfernten Windows-Computers passt sich auf Wunsch an das Verbindungsfenster und an Vollbild an. Gewählt wird die nächstpassende unterstützte Auflösung; beim Trennen wird die vorherige Einstellung wiederhergestellt.

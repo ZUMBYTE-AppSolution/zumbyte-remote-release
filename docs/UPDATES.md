@@ -1,4 +1,4 @@
-# Updates ohne GitHub-API
+# Updates
 
 ## Ablauf
 
@@ -15,11 +15,21 @@ Der reguläre Prüfzyklus beträgt sechs Stunden. ETags und ein lokaler Prüfsta
 
 Unter **Updates → Desktop-App** prüfen und installieren. Die App beendet sich dafür; Windows kann Administratorbestätigung verlangen. Der Installer erhält die vorherigen Dateien unter `<Installationsordner>.previous`. Bestehende Dienstschlüssel und Gerätezuordnung bleiben erhalten.
 
-Die Pakete sind derzeit nicht mit einem Authenticode-Zertifikat signiert. Die eingebaute Updatefunktion verwendet einen eigenen kryptografischen Prüfschlüssel. Einen manuell heruntergeladenen ersten Installer über die offizielle Repository-Adresse beziehen.
+Programme, Hintergrunddienst und Installer sind digital signiert. Windows zeigt **Andreas Zumbansen** als verifizierten Herausgeber. Einen manuell heruntergeladenen Installer immer aus dem offiziellen Release beziehen.
 
 ## macOS
 
-Die App lädt das PKG für Intel oder Apple Silicon und prüft dieselbe Ed25519-Updatebeschreibung sowie SHA-256. Der macOS-Installer übernimmt die Installation in den Programme-Ordner. Ein eingerichteter Benutzer-LaunchAgent wird vorübergehend gestoppt und beim nächsten Appstart wiederhergestellt. Profile und Gerätezuordnung liegen außerhalb der App. Die Pakete sind noch nicht mit einer Apple-Developer-ID signiert oder notarisiert; die Update-Signatur ersetzt diese Apple-Signatur nicht. Siehe [Mac-Anleitung](MACOS.md).
+Die App lädt den passenden PKG-Installer für Intel oder Apple Silicon. Zusätzlich zur Updatebeschreibung und SHA-256 werden ab Alpha 4 die Apple-Signatur und die Freigabe des Installers geprüft. App und Downloads sind mit Developer ID signiert und von Apple notarisiert.
+
+Der macOS-Installer übernimmt die Installation in den Programme-Ordner. Ein eingerichteter Benutzer-Hintergrunddienst wird für die Aktualisierung angehalten und beim nächsten Appstart wiederhergestellt. Lässt sich der Installer nicht öffnen, läuft die vorhandene App weiter. Profile und Gerätezuordnung bleiben erhalten. [Mac-Anleitung](MACOS.md).
+
+**Ältere Mac-Version ohne Fortschrittsanzeige:** Wenn das Update wiederholt abbricht, lade den passenden PKG-Installer von der [Release-Seite](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases) und öffne ihn einmal direkt. Eine Deinstallation ist dafür nicht erforderlich.
+
+## Fortschritt und Fehler ab Alpha 4
+
+Neue zRemote-Builds zeigen den Downloadfortschritt mit Geschwindigkeit und geschätzter Restzeit. Danach folgt die Paketprüfung. Unterbrochene Downloads werden automatisch erneut versucht und nach Möglichkeit fortgesetzt. Ein Fehler bleibt mit einer Möglichkeit zum erneuten Versuch sichtbar.
+
+Ein laufender Download wird auch bei langsamer Verbindung nicht nach drei Minuten abgebrochen. Die neue Anzeige ist ebenfalls im aktualisierten Server enthalten, einschließlich Docker und Unraid.
 
 ## Server und Unraid
 
@@ -28,6 +38,10 @@ Start über `apps/launcher/server.mjs`; der Container verwendet denselben Launch
 Neue Laufzeiten liegen getrennt von Datenbank und Konten unter `/data/updates/runtimes`. Der Launcher prüft ihren Start und kehrt bei einem Fehlstart zur bisherigen Laufzeit zurück. Der aktive Pfad bleibt über Containerneustarts erhalten. Das Containerdateisystem braucht keine Schreibfreigabe, der Docker-Socket wird nicht benötigt.
 
 Das betrifft die Anwendung im Container. Für Änderungen der Node.js-/Linux-Basis ein neues Container-Image verwenden und denselben Appdata-Ordner erhalten.
+
+Das öffentliche Containerimage bleibt vorerst bei **0.3.0 Alpha 1**. Die Anwendung darin kann ihr Serverpaket über die Updatefunktion aktualisieren.
+
+In bestehenden Alpha-1-Containern erscheint beim Laufzeitupdate zunächst nur der allgemeine Updatezustand. Der ausführliche Downloadfortschritt wird mit neu gebauten Containerimages bereitgestellt.
 
 ## ServerDesk-Plugin
 
