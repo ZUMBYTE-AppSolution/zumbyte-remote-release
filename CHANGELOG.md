@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0-alpha.6 · 19. November 2026
+
+- Windows und Mac zeigen in der Seitenleiste die tatsächlich installierte App-Version.
+- Die Mac-App trägt den Anzeigenamen zRemote. Vorhandene Einstellungen und Gerätezuordnungen bleiben erhalten.
+- Mausbewegungen werden gleichmäßiger übertragen. Beim Klicken wird die letzte Zeigerposition zuerst gesendet.
+- Die Bildverarbeitung im Verbindungsfenster benötigt weniger Rechenzeit.
+- Beim Windows-Hintergrunddienst blockiert die Bildschirmaufnahme keine Eingaben mehr.
+- Die höchste Bildqualität unterstützt bei direkten Desktop-Verbindungen bis zu 60 Bilder pro Sekunde. Die tatsächlich erreichbare Bildrate hängt von den Geräten und der Verbindung ab.
+- Die App prüft, ob die Maus- und Tastatursteuerung wirklich bereit ist. Fehlende Freigaben oder ein Startfehler werden angezeigt.
+
+Windows-Pakete sind digital signiert. Die Pakete für Apple Silicon und Intel sind mit Developer ID signiert und von Apple notarisiert. Das Docker-Image und die Community-Apps-Dateien bleiben bei Alpha 5; der Kanal `:alpha` bleibt unverändert.
+
 ## 0.3.0-alpha.5 · 19. November 2026
 
 - Das Docker-Image für Unraid enthält Alpha 5 und lässt sich über den Kanal `:alpha` direkt im Docker-Tab aktualisieren.

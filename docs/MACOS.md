@@ -10,7 +10,7 @@ Ab 0.3.0-alpha.3 sind die App und der PKG-Installer mit Developer ID signiert un
 
 ## Bildschirm und Steuerung freigeben
 
-Unter **Dieser Computer** den Mac dem Konto zuordnen. Die Schaltflächen **Bildschirmaufnahme** und **Bedienungshilfen** öffnen die passenden Systemeinstellungen. Dort Zumbyte Remote freigeben und die App anschließend erneut öffnen. macOS kann nach einem Update eine erneute Freigabe verlangen.
+Unter **Dieser Computer** den Mac dem Konto zuordnen. Die Schaltflächen **Bildschirmaufnahme** und **Bedienungshilfen** öffnen die passenden Systemeinstellungen. Dort zRemote freigeben. Bei einer früheren Installation kann der Eintrag noch **Zumbyte Remote** heißen. Die App danach über **zRemote → Beenden** vollständig schließen und erneut öffnen; das Schließen-Kreuz lässt sie im Hintergrund weiterlaufen. Anschließend unter **Dieser Computer → Freigaben erneut prüfen** kontrollieren und neu verbinden. macOS kann nach einem Update eine erneute Freigabe verlangen.
 
 Ohne Bildschirmfreigabe kann der Mac kein Bild übertragen; ohne Bedienungshilfen kann er keine Maus- und Tastatureingaben annehmen. Ein zentraler Login ersetzt diese macOS-Freigaben nicht.
 
