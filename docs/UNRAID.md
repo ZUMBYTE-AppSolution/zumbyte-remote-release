@@ -1,6 +1,6 @@
 # zRemote auf Unraid
 
-Das Containerimage enthält **0.3.0 Alpha 5** mit Downloadfortschritt für Serverupdates. [Downloads](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.5)
+Der Unraid-Container ist eine zusätzliche Betriebsart für einen eigenen zRemote-Server. Für eine Verbindung über ID und Passwort ist er nicht erforderlich. Das Containerimage enthält **0.3.0 Alpha 9** mit Downloadfortschritt für Serverupdates. [Downloads](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.9)
 
 ## Vorhandenen Container umstellen
 
@@ -9,7 +9,7 @@ Das Containerimage enthält **0.3.0 Alpha 5** mit Downloadfortschritt für Serve
 3. Netzwerk, feste IP, Appdata-Pfad und eigene Einstellungen beibehalten. Bei einer eigenen br0-Adresse bleibt diese Adresse bestehen.
 4. **Anwenden** wählen. Unraid lädt das Image und erstellt den Container mit demselben Datenordner neu.
 
-Danach laufen weitere Imageupdates über **Docker → Auf Updates prüfen → Update**. Der Kanal **alpha** zeigt jeweils auf das neue geprüfte Alpha-Image. Ein festes Versionstag wie `:0.3.0-alpha.5` und ein nur lokal importiertes Image verfolgen diesen Kanal nicht.
+Danach laufen weitere Imageupdates über **Docker → Auf Updates prüfen → Update**. Der Kanal **alpha** zeigt jeweils auf das neue geprüfte Alpha-Image. Ein festes Versionstag wie `:0.3.0-alpha.9` und ein nur lokal importiertes Image verfolgen diesen Kanal nicht.
 
 Konten, Computer und Gerätezuordnungen bleiben im vorhandenen Appdata-Ordner. Diesen Ordner nicht löschen und keine neue Ersteinrichtung starten. Vor dem Umstieg empfiehlt sich eine Sicherung bei gestopptem Container.
 
@@ -61,7 +61,7 @@ Die Anwendung liest den öffentlichen Release-Feed und prüft Signatur und SHA-2
 
 ## Ohne Registry oder mit Compose
 
-Das fertige Imagearchiv lässt sich mit `docker load --input ZumbyteRemote-DockerImage-0.3.0-alpha.5-linux-amd64.tar.gz` importieren. Es enthält das feste Versionstag. Für spätere Updates durch Unraid trotzdem den Kanal `:alpha` als Repository eintragen und einmal aus der Registry laden.
+Das fertige Imagearchiv lässt sich mit `docker load --input ZumbyteRemote-DockerImage-0.3.0-alpha.9-linux-amd64.tar.gz` importieren. Es enthält das feste Versionstag. Für spätere Updates durch Unraid trotzdem den Kanal `:alpha` als Repository eintragen und einmal aus der Registry laden.
 
 Das Docker-Paket enthält Compose, Beispielkonfiguration und Unraid-Vorlage. In der entpackten Konfiguration Domain, Appdata, UID/GID und Bind-Adresse anpassen. Dann:
 

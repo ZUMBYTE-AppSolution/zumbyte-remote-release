@@ -1,46 +1,69 @@
-zRemote 0.3.0 Alpha 3
+zRemote für Windows
 
-Einrichten
+Installieren und verbinden
 1. Den Windows-Installer starten und danach die Desktopverknüpfung zRemote öffnen.
-2. Die eigene HTTPS-Serveradresse eintragen und anmelden.
-3. Unter „Dieser Computer“ den Windows-Dienst einrichten. Windows fragt dabei
-einmal nach Administratorrechten.
-4. Beim Dienstgerät über das Zahnrad den gewünschten Zugriff auswählen.
-„Mein Konto“ erlaubt den Zugriff über das angemeldete Konto ohne zusätzliche
-Bestätigung am Gerät. Ein zusätzliches Gerätepasswort ist ebenfalls möglich.
+2. Unter „Verbinden“ stehen die eigene neunstellige ID und das Einmalpasswort.
+   Ein Konto oder ein eigener Server ist für eine Verbindung nicht erforderlich.
+3. Am steuernden Computer die ID und das Passwort des entfernten Computers
+   eingeben. Registrierte Nutzer können auch ihren Verbindungsnamen verwenden.
+4. Am entfernten Computer die Anfrage annehmen und die gewünschten Funktionen
+   freigeben. Im Präsentationsmodus lässt sich nur der Mauszeiger bewegen;
+   Klicks und Tastatureingaben bleiben gesperrt.
 
-Verbinden
-Ein Gerät auswählen und „Bildschirm öffnen“ anklicken. Jede Verbindung öffnet
-ein eigenes Fenster. Ins übertragene Bild klicken, um Maus und Tastatur zu
-verwenden. Pos1 / Home gibt beides auf dem steuernden Computer wieder frei.
+Die ID bleibt bei portabler und installierter Nutzung desselben Windows-Nutzers
+erhalten. Unter „Dieser Computer“ lässt sich ein Dauerpasswort festlegen.
+„Jede Verbindung vor Ort bestätigen“ kann dort ausgeschaltet werden, wenn ein
+Passwort verlangt wird. Dauerhaft erlaubte Gegenstellen erhalten nur die Rechte,
+die ausdrücklich für sie gespeichert wurden. Unter „Kontakte“ lassen sich diese
+Freigaben später ändern oder entfernen.
 
-Die Steuerleiste erscheint am oberen Bildschirmrand. Sie blendet sich selbst
-aus und erscheint wieder, wenn die Maus den Rand mittig erreicht. Mit der
-Stecknadel bleibt sie sichtbar; am Griff lässt sie sich verschieben.
+Während der Verbindung
+Jede Verbindung öffnet ein eigenes Fenster. Ins übertragene Bild klicken, um
+Maus und Tastatur zu verwenden. Pos1 / Home gibt beides am steuernden Computer
+wieder frei. Die ausklappbare Steuerleiste erscheint am oberen Bildschirmrand.
+Mit der Stecknadel bleibt sie sichtbar; am Griff lässt sie sich verschieben.
 
-Unter „Darstellung und Qualität“ lässt sich die tatsächliche Bildschirmauflösung
-des entfernten Windows-Computers automatisch an das Fenster anpassen, auch im
-Vollbild. zRemote wählt eine unterstützte Auflösung. Beim Trennen wird die
-vorherige Auflösung wiederhergestellt. „Scharf“ überträgt das Bild möglichst
-detailreich; „Wenig Daten“ hilft bei langsameren Verbindungen.
+Das kleine Fenster auf dem ferngesteuerten Computer zeigt die aktive Verbindung.
+Dort lassen sich Rechte ändern und die Verbindung jederzeit trennen. Das Fenster
+kann minimiert werden. Text, einzelne Dateien und Chatnachrichten werden direkt
+zwischen den Computern übertragen. Die entsprechenden Funktionen müssen vom
+entfernten Nutzer freigegeben sein. Ordnerübertragung ist noch nicht enthalten.
 
-Bei einem Verbindungsabbruch wird automatisch erneut verbunden. Der Countdown
-zeigt den nächsten Versuch. „Verbindung trennen“ oder das Schließen des Fensters
-beendet weitere Versuche.
+Unter „Darstellung und Qualität“ lässt sich eine unterstützte Bildschirmauflösung
+an die Fenstergröße oder das Vollbild anpassen. Beim Trennen wird die vorherige
+Auflösung wiederhergestellt. Verbindungseinstellungen werden je Gegenstelle
+gespeichert und können auf die Vorgaben zurückgesetzt werden.
+
+Bei einem Verbindungsabbruch zeigt ein Countdown den nächsten Versuch an.
+Schließen des Verbindungsfensters beendet die Wiederholungen. Nach 90 Minuten
+endet die Sitzung; erneutes Verbinden innerhalb dieser Sitzung verlängert sie
+nicht. Eine Verbindung kann an Router- oder Firewallbeschränkungen scheitern;
+die öffentliche Vermittlung leitet keine Bildschirmübertragung weiter.
 
 Zugriff vor der Windows-Anmeldung
-Der Dienst startet mit Windows. Er benötigt kein gespeichertes Windows-Kennwort.
-Wenn Windows eine Anmeldung verlangt, werden die Windows-Zugangsdaten direkt am
-übertragenen Anmeldebildschirm eingegeben. Auch die Benutzerkontensteuerung wird
-über den Dienst übertragen. Das zentrale zRemote-Konto ersetzt keine
-Windows-Anmeldung.
+Unter „Dieser Computer → Hintergrunddienst einrichten“ den Windows-Dienst
+installieren. Windows fragt einmal nach Administratorrechten. Für Zugriff ohne
+Person vor Ort eine passende Passwort- oder dauerhafte Freigabe einrichten.
+Der Dienst startet mit Windows und benötigt kein gespeichertes Windows-Kennwort.
+Die Betriebssystemanmeldung bleibt erforderlich; sie wird im übertragenen
+Windows-Anmeldebildschirm durchgeführt. Auch die Benutzerkontensteuerung wird
+über den Dienst übertragen.
 
-Updates
+Ein vorhandener Dienst für einen eigenen Server bleibt erhalten. Um zusätzlich
+die öffentliche ID zu verwenden, „Hintergrunddienst einrichten“ erneut ausführen.
+Dienstgestützte Verbindungen übertragen in dieser Ausgabe keinen Ton und kein
+Mikrofon; diese Freigaben stehen dort nicht zur Auswahl.
+
+Konto und Updates
+Mit einem optionalen Zumbyte-Konto lassen sich ein Verbindungsname, Freunde und
+Favoriten speichern. Die Kontosicherheit einschließlich Zwei-Faktor-Anmeldung
+wird über das Zumbyte-Konto verwaltet.
+
 Unter „Updates“ nach neuen Versionen suchen und den geprüften Installer starten.
-Gerätezuordnung und geschützte Einstellungen bleiben erhalten. Die Suche nutzt
-den GitHub-Release-Feed und direkte Dateien. Eine GitHub-API oder ein GitHub-Token
-ist dafür nicht nötig.
+Downloadfortschritt und Fehler bleiben sichtbar. Gerätezuordnung und geschützte
+Einstellungen bleiben bei Updates erhalten. Die Suche benötigt keinen GitHub-
+Token und verwendet den öffentlichen Release-Feed sowie direkte Paketdateien.
 
-Windows-Programme, Hilfsprozesse und Installer werden mit Microsoft Artifact
-Signing signiert. Herausgeber des derzeit verwendeten Zertifikats ist
-Andreas Zumbansen. Die Version ist weiterhin eine Alpha.
+Windows-Programme, Hilfsprozesse, Installer und Uninstaller sind mit Microsoft
+Artifact Signing signiert. Herausgeber des derzeit verwendeten Zertifikats ist
+Andreas Zumbansen. Die Software ist eine Alpha-Version.

@@ -1,4 +1,4 @@
-# Updates
+# Updates ohne GitHub-API
 
 ## Ablauf
 
@@ -7,33 +7,27 @@
 3. `update.json` und `update.sig` direkt vom Versionstag laden.
 4. Beschreibung mit dem fest eingebauten Ed25519-Schlüssel prüfen.
 5. Paket laden, Größe und SHA-256 prüfen.
-6. Passenden Windows-/Mac-Installer starten oder neue Serverlaufzeit vorbereiten.
+6. Passendes Windows-, Mac- oder Linux-Paket installieren oder die neue Serverlaufzeit vorbereiten.
 
-Der reguläre Prüfzyklus beträgt sechs Stunden. ETags und ein lokaler Prüfstand vermeiden unnötige Abrufe. Eine fehlgeschlagene Prüfung oder ein ungültiges Paket lässt die laufende Version bestehen.
+Der reguläre Prüfzyklus beträgt sechs Stunden. ETags und ein lokaler Prüfstand vermeiden unnötige Abrufe. Downloadfortschritt und Fehlermeldungen bleiben sichtbar. Unterbrochene Downloads lassen sich sicher fortsetzen; ein aktiver Download bricht nicht nach einer festen Gesamtdauer ab. Eine fehlgeschlagene Prüfung oder ein ungültiges Paket lässt die laufende Version bestehen.
 
 ## Windows
 
-Unter **Updates → Desktop-App** prüfen und installieren. Die App beendet sich dafür; Windows kann Administratorbestätigung verlangen. Der Installer erhält die vorherigen Dateien unter `<Installationsordner>.previous`. Bestehende Dienstschlüssel und Gerätezuordnung bleiben erhalten.
+Unter **Updates** prüfen und installieren. Die App beendet sich dafür; Windows kann Administratorbestätigung verlangen. Der Installer erhält die vorherigen Dateien unter `<Installationsordner>.previous`. Bestehende Dienstschlüssel und Gerätezuordnung bleiben erhalten.
 
-Programme, Hintergrunddienst und Installer sind digital signiert. Windows zeigt **Andreas Zumbansen** als verifizierten Herausgeber. Einen manuell heruntergeladenen Installer immer aus dem offiziellen Release beziehen.
+Programme, Hilfsprozesse, Installer und Uninstaller sind mit Microsoft Artifact Signing und Zeitstempel signiert. Die Updatebeschreibung wird zusätzlich mit dem eingebauten Prüfschlüssel kontrolliert. Einen manuell heruntergeladenen ersten Installer über die offizielle Repository-Adresse beziehen.
 
 ## macOS
 
-Die App lädt den passenden PKG-Installer für Intel oder Apple Silicon. Zusätzlich zur Updatebeschreibung und SHA-256 werden ab Alpha 5 die Apple-Signatur und die Freigabe des Installers geprüft. App und Downloads sind mit Developer ID signiert und von Apple notarisiert.
+Die App lädt das PKG für Intel oder Apple Silicon und prüft dieselbe Ed25519-Updatebeschreibung sowie SHA-256. Der macOS-Installer übernimmt die Installation in den Programme-Ordner. Ein eingerichteter Benutzer-LaunchAgent wird vorübergehend gestoppt und beim nächsten Appstart wiederhergestellt. Profile und Gerätezuordnung liegen außerhalb der App. App und Installer sind mit Developer ID signiert und bei Apple notarisiert. Siehe [Mac-Anleitung](MACOS.md).
 
-Der macOS-Installer übernimmt die Installation in den Programme-Ordner. Ein eingerichteter Benutzer-Hintergrunddienst wird für die Aktualisierung angehalten und beim nächsten Appstart wiederhergestellt. Lässt sich der Installer nicht öffnen, läuft die vorhandene App weiter. Profile und Gerätezuordnung bleiben erhalten. [Mac-Anleitung](MACOS.md).
+## Linux
 
-**Ältere Mac-Version ohne Fortschrittsanzeige:** Wenn das Update wiederholt abbricht, lade den passenden PKG-Installer von der [Release-Seite](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases) und öffne ihn einmal direkt. Eine Deinstallation ist dafür nicht erforderlich.
-
-## Fortschritt und Fehler ab Alpha 5
-
-Neue zRemote-Builds zeigen den Downloadfortschritt mit Geschwindigkeit und geschätzter Restzeit. Danach folgt die Paketprüfung. Unterbrochene Downloads werden automatisch erneut versucht und nach Möglichkeit fortgesetzt. Ein Fehler bleibt mit einer Möglichkeit zum erneuten Versuch sichtbar.
-
-Ein laufender Download wird auch bei langsamer Verbindung nicht nach drei Minuten abgebrochen. Die neue Anzeige ist ebenfalls im aktualisierten Server enthalten, einschließlich Docker und Unraid.
+Eine DEB-Installation lädt das signiert beschriebene Paket und bittet über die Paketverwaltung um die Installation. Die portable Ausgabe prüft das neue TAR.GZ-Paket und wechselt anschließend auf den neuen Programmordner. Bei einem Fehlstart bleibt die bisherige Ausgabe erhalten. Die Geräteidentität und Einstellungen liegen außerhalb der ausgetauschten Programmdateien. Siehe [Linux-Anleitung](LINUX.md).
 
 ## Server und Unraid
 
-Das aktuelle öffentliche Image enthält **0.3.0 Alpha 5**, einschließlich Downloadfortschritt, Geschwindigkeit und Restzeit für Anwendungsupdates.
+Das Image enthält den gemeinsamen Updater mit Downloadfortschritt, Geschwindigkeit und Restzeit für Anwendungsupdates.
 
 In Unraid als Repository **`ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha`** verwenden. Danach unter **Docker → Auf Updates prüfen → Update** das vollständige Image aktualisieren. Das erneuert auch Node.js, die Linux-Basis und den Updater. Feste Versionstags wechseln nicht automatisch zur nächsten Version. [Umstieg und Einrichtung](UNRAID.md).
 

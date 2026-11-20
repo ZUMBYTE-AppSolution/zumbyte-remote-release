@@ -1,4 +1,37 @@
-# Changelog
+# Änderungen
+
+## 0.3.0 Alpha 9 · 20. November 2026
+
+### Verbinden mit ID und Passwort
+
+zRemote vergibt jetzt eine feste neunstellige ID. Damit lassen sich Computer ohne Registrierung und ohne eigenen Server verbinden. Das Einmalpasswort wird nach Verwendung erneuert; ein Dauerpasswort lässt sich unter „Dieser Computer“ speichern.
+
+Ein Zumbyte-Konto ergänzt einen Verbindungsnamen, Freunde und Favoriten. Die ID bleibt auch ohne Konto nutzbar. Portable und installierte App verwenden beim selben Benutzer dieselbe Gerätezuordnung.
+
+### Du bestimmst die Freigaben
+
+Der Annahmedialog lässt Bild, Maus, Tastatur, Zwischenablage, Dateien, Chat und verfügbaren Ton einzeln freigeben. Im Präsentationsmodus bewegt die Gegenstelle nur den Mauszeiger. Dauerhaft erlaubte Zugriffe können mit eigenen Rechten gespeichert und unter „Kontakte“ wieder geändert werden.
+
+Auf dem ferngesteuerten Computer bleibt ein kleines, minimierbares Fenster zum Ändern der Freigaben und Trennen der Verbindung. Chatnachrichten, Links und Dateien laufen direkt zwischen den Computern. Nach 90 Minuten endet eine Sitzung.
+
+### Jetzt auch als Linux-App
+
+Für Linux x64 gibt es einen DEB-Installer und ein portables TAR.GZ-Paket. Unter X11 sind Bildschirmübertragung, Maus, Tastatur sowie Text- und Dateizwischenablage enthalten. Hintergrundstart nach der Benutzeranmeldung und der gemeinsame Updater sind eingebaut.
+
+Wayland ist noch experimentell und verlangt die Freigabe im Systemdialog. Bei mehreren angeschlossenen Bildschirmen steht dort zunächst nur die Ansicht zur Verfügung. Zugriff vor der Linux-Anmeldung ist in dieser Ausgabe nicht enthalten.
+
+### Außerdem
+
+- Einstellungen für Bild, Qualität und Eingaben bleiben je Gegenstelle gespeichert und lassen sich zurücksetzen.
+- Bei Verbindungsabbruch zeigt ein Countdown den nächsten Versuch. Schließen des Fensters beendet weitere Versuche.
+- Der Windows-Hintergrunddienst verwendet dieselbe öffentliche ID. Bestehende Dienste für einen eigenen Server lassen sich über „Hintergrunddienst einrichten“ ergänzen.
+- Mac-Verbindungen passen das vollständige Bild ein, wenn die Bildschirmauflösung nicht sicher geändert werden kann.
+- Updates zeigen Downloadfortschritt und bleibende Fehlermeldungen. Die Suche benötigt keinen GitHub-Token.
+
+Die öffentliche Vermittlung überträgt Verbindungsangebote und keine Sitzungsinhalte. Verbindungen können an Router- oder Firewallbeschränkungen scheitern. Der eigene Server und der Unraid-Container bleiben als zusätzliche Betriebsart verfügbar.
+
+Windows-Dienstverbindungen übertragen in dieser Ausgabe keinen Ton und kein Mikrofon. Ordnerübertragung und ein virtueller Mac-Zusatzbildschirm sind nicht enthalten.
+
 
 ## 0.3.0-alpha.8 · 19. November 2026
 

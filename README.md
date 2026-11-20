@@ -1,96 +1,80 @@
-<p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="Zumbyte Remote"></p>
+<p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="zRemote"></p>
 <h1 align="center">zRemote</h1>
-<p align="center">Deine Computer über deinen eigenen Server erreichen.</p>
-<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.8">Downloads</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="docs/MACOS.md">Mac einrichten</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
+<p align="center">Computer über ID und Passwort direkt verbinden.</p>
+<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.9">Downloads</a> · <a href="docs/WINDOWS-SCHNELLSTART.txt">Windows</a> · <a href="docs/MACOS.md">Mac</a> · <a href="docs/LINUX.md">Linux</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
 
-Melde dich an deinem eigenen Server an und öffne einen Computer aus deiner Geräteliste. Für jedes Gerät wählst du, ob eine Person vor Ort bestätigen muss, deine zentrale Anmeldung genügt oder ein zusätzliches Gerätepasswort nötig ist.
+zRemote zeigt dir eine feste neunstellige ID und ein Einmalpasswort. Gib beides am anderen Computer ein und wähle am Zielgerät aus, was erlaubt sein soll. Ein Konto und ein eigener Server sind dafür optional. Mit einem Zumbyte-Konto kommen ein Verbindungsname, Freunde und Favoriten hinzu.
 
-**0.3.0 Alpha 8** bringt den Chat direkt in deine Verbindungen: mit Sprechblasen, anklickbaren Links und Dateianhängen samt Fortschritt. Verbindungseinstellungen werden für jeden Computer separat gespeichert. Windows-Pakete sind digital signiert, die Mac-Pakete sind mit Developer ID signiert und von Apple notarisiert. Profile und Gerätezuordnungen bleiben bei Updates erhalten.
+**0.3.0 Alpha 9** ergänzt ID-Verbindungen ohne Registrierung, einen Annahmedialog mit einzelnen Freigaben und eine Linux-App. Portable und installierte Ausgabe verwenden beim selben Benutzer dieselbe Gerätezuordnung. Die öffentliche Vermittlung tauscht Verbindungsangebote aus; Bild, Eingaben, Chat und Dateien laufen direkt zwischen den Computern.
 
 ## Herunterladen
 
 | Für … | Download |
 |---|---|
-| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-Setup-0.3.0-alpha.8-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-Portable-0.3.0-alpha.8-windows-x64.zip) |
-| Mac mit Apple Silicon | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-Setup-0.3.0-alpha.8-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-0.3.0-alpha.8-macos-arm64.dmg) |
-| Mac mit Intel | [PKG installieren](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-Setup-0.3.0-alpha.8-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-0.3.0-alpha.8-macos-x64.dmg) |
-| Docker / Unraid | Öffentliches Image: `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` · [Einrichtung](docs/UNRAID.md) |
-| Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.5.zip) |
-| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/ZumbyteRemote-Server-0.3.0-alpha.8.tar.gz) |
-| Imageimport / Containerkonfiguration | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-DockerImage-0.3.0-alpha.5-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.5/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.5.zip) |
+| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Portable-0.3.0-alpha.9-windows-x64.zip) |
+| Mac mit Apple Silicon | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-0.3.0-alpha.9-macos-arm64.dmg) |
+| Mac mit Intel | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-0.3.0-alpha.9-macos-x64.dmg) |
+| Linux x64 | [DEB-Installer](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-linux-x64.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Portable-0.3.0-alpha.9-linux-x64.tar.gz) |
+| Eigener Server auf Docker / Unraid | `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` · [Einrichtung](docs/UNRAID.md) |
+| Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.9.zip) |
+| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Server-0.3.0-alpha.9.tar.gz) |
+| Imageimport / Containerkonfiguration | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-DockerImage-0.3.0-alpha.9-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.9.zip) |
 
-[Prüfsummen für Alpha 8](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.8/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md)
+[Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md) · [zRemote für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins)
 
-Windows-Pakete enthalten die benötigten Laufzeiten. Die Mac-Ausgabe benötigt macOS 13 oder neuer; für Bildschirmübertragung und Steuerung sind die macOS-Freigaben für Bildschirmaufnahme und Bedienungshilfen nötig. Die integrierte Updateprüfung verwendet signierte Updatebeschreibungen und SHA-256. Das Docker-Image enthält weiterhin Alpha 5 und lässt sich über den Kanal `:alpha` direkt in Unraid aktualisieren.
+Windows-Pakete enthalten die benötigten Laufzeiten und sind digital signiert. Mac-Pakete sind mit Developer ID signiert und bei Apple notarisiert; macOS 13 oder neuer wird benötigt. Der Linux-Installer ist für Ubuntu 22.04 oder neuer und vergleichbare Debian-Systeme vorgesehen. Für den geschützten Linux-Gerätespeicher muss der Anmeldeschlüsselbund verfügbar sein.
 
 ## Die App
 
-![Geräteliste](assets/screenshots/windows-dienst.png)
+![Mit ID und Passwort verbinden](assets/screenshots/alpha9-verbinden.png)
 
-| Anmeldung | Diesen Computer einrichten |
-|---|---|
-| ![Anmeldung](assets/screenshots/anmeldung.png) | ![Computer und Hintergrunddienst](assets/screenshots/dieser-computer.png) |
+![Zugriff auf diesen Computer einstellen](assets/screenshots/alpha9-zugriff.png)
 
-Die Bilder zeigen die laufende App.
+Die Bilder zeigen zRemote unter Linux.
 
-## Verbinden
+## Erste Verbindung
 
-1. Server starten und eine eigene HTTPS-Adresse mit WebSocket-Unterstützung einrichten.
-2. Die Adresse im Browser öffnen. Den einmaligen Code aus `/data/setup-token.txt` eingeben und das erste Administratorkonto anlegen.
-3. Desktop-App installieren, dieselbe Serveradresse eintragen und anmelden.
-4. Unter **Dieser Computer** den Computer deinem Konto zuordnen. Er bekommt einen festen Eintrag in der Geräteliste.
-5. Für unbeaufsichtigten Zugriff den Hintergrunddienst einrichten und die gewünschte Zugriffsregel wählen.
+1. Auf beiden Computern eine aktuelle zRemote-App öffnen.
+2. Am Zielcomputer ID und Einmalpasswort ablesen. Alternativ unter **Dieser Computer** ein Dauerpasswort festlegen.
+3. Am steuernden Computer unter **Verbinden** ID oder Verbindungsname und Passwort eingeben.
+4. Die Anfrage am Zielcomputer annehmen und die gewünschten Funktionen freigeben.
 
-Weitere Konten werden unter **Benutzer** angelegt. Jedes Konto sieht seine eigenen Computer.
+Die ID bleibt an die geschützte Geräteidentität gebunden. Für die Verbindung ist keine Registrierung erforderlich. Wer sich anmeldet, kann einen Verbindungsnamen anlegen und Computer als Freunde oder Favoriten speichern. Die Kontosicherheit und Zwei-Faktor-Anmeldung verwaltest du über dein Zumbyte-Konto.
 
-| Einstellung | Beim Verbinden |
-|---|---|
-| **Bestätigung am Gerät** | Die Person am Zielcomputer erlaubt den Zugriff. |
-| **Mein Konto / kein weiteres Passwort** | Deine zentrale Anmeldung genügt; es erscheint keine zusätzliche Freigabemaske. |
-| **Gerätepasswort** | Zusätzlich zur zentralen Anmeldung wird das Gerätepasswort abgefragt. |
+## Freigaben bestimmen
+
+Im Annahmedialog wählst du Bild, Maus, Tastatur, Zwischenablage, Dateien, Chat und verfügbaren Ton. **Präsentationsmodus** erlaubt nur die Bewegung des Mauszeigers; Klicks und Tastatureingaben sind gesperrt. Über **Immer erlauben** lässt sich eine Gegenstelle mit ausdrücklich gewählten Rechten speichern. Unter **Kontakte** können diese Rechte später geändert oder entfernt werden.
+
+Auf dem ferngesteuerten Computer bleibt ein kleines, minimierbares Fenster zum Ändern der Rechte und Trennen der Verbindung. Unter **Dieser Computer** lässt sich die Bestätigung vor Ort ausschalten, wenn ein Passwort verlangt wird. Die dort gespeicherten Freigaben gelten dann für Verbindungen mit Passwort.
 
 ## Während der Verbindung
 
-Jede Verbindung öffnet ein eigenes Fenster. Ins Bild klicken, um zu steuern. **Pos1 / Home** gibt Maus und Tastatur lokal frei. Der Monitorplan zeigt die Anordnung der Bildschirme mit Nummern; ein Klick wechselt den Monitor. Mit dem Pfeil geht es zum nächsten Bildschirm.
+Jede Verbindung öffnet ein eigenes Fenster. Klicke ins Bild, um zu steuern. **Pos1 / Home** gibt Maus und Tastatur auf deinem Computer wieder frei; auf Mac-Tastaturen ohne Home gewöhnlich **fn + Pfeil links**.
 
-**Vollbild** verwendet ein eigenes Vollbildfenster mit schwebender einklappbarer Leiste. Dort stehen Monitorwahl, Auflösungsgrenze, Bildqualität, 1:1, Zwischenablage, Dateien und Trennen bereit. Mit **Bildschirm an Fenster anpassen** wird die tatsächliche Auflösung des entfernten Computers auf den nächstpassenden unterstützten Modus gesetzt. Dafür muss auf dem Zielcomputer zRemote 0.3.0 Alpha 3 oder neuer laufen. Die separate Auflösungsgrenze begrenzt nur die Übertragung. Lässt sich die entfernte Auflösung nicht ändern, bleibt sie bestehen und das vollständige Bild wird unverzerrt eingepasst. **Originalgröße · 1:1** ist weiterhin manuell wählbar.
+Die einzeilige Steuerleiste blendet sich automatisch aus und erscheint wieder, wenn die Maus den Bildschirmrand mittig erreicht. Mit der Stecknadel bleibt sie sichtbar; am Griff lässt sie sich verschieben. Die Monitorübersicht zeigt Anordnung und Nummern der Bildschirme. Ein Klick oder der Weiter-Pfeil wechselt den Bildschirm.
 
-In den aktuellen Desktop-Apps lassen sich **Text und mehrere Dateien in beide Richtungen** kopieren und einfügen. Strg+C/V beziehungsweise Cmd+C/V verwenden oder die Schaltflächen in der Leiste wählen. **Dateien senden** öffnet eine Dateiauswahl. Fortschritt und Fehler werden im Verbindungsfenster angezeigt. Ordner werden noch nicht übertragen. Die Zwischenablage ist für die angemeldete Desktop-Sitzung vorgesehen.
+Unter **Darstellung und Qualität** kannst du das Bild einpassen, in Originalgröße anzeigen oder die unterstützte Auflösung des Zielcomputers an die Fenstergröße anpassen. Falls ein Wechsel nicht möglich ist, bleibt das vollständige Bild proportional eingepasst. Bei geöffnetem MacBook oder aktiver, entsperrter Mac-Sitzung wird die Bildschirmauflösung nicht verändert. Einstellungen für Bild, Ton und Eingaben bleiben je Gegenstelle gespeichert und lassen sich zurücksetzen.
 
-Über **Chat** öffnest du die Unterhaltung zur laufenden Verbindung. Eigene und empfangene Nachrichten haben unterschiedliche Sprechblasen; Uhrzeit und Zustellstatus stehen dabei. Links sind anklickbar. Dateianhänge zeigen ihren Fortschritt und können mit **Speichern …** abgelegt werden. Sie überschreiben die Zwischenablage nicht automatisch. Nachrichten und Dateien werden direkt zwischen den Computern übertragen.
+Text und einzelne Dateien lassen sich in beide Richtungen über die freigegebene Zwischenablage übertragen. Im **Chat** stehen Sprechblasen, anklickbare Links und Dateianhänge mit Fortschritt zur Verfügung. **Speichern …** legt einen empfangenen Anhang gezielt ab, ohne die Zwischenablage zu überschreiben. Ordnerübertragung ist noch nicht enthalten.
 
-Bild, Ton, Mauszeiger und Steuerleiste bleiben für jeden Computer separat gespeichert. **Darstellung → Geräteeinstellungen zurücksetzen** stellt die Vorgaben für dieses Gerät wieder her. Nach 90 Minuten endet die Sitzung; eine neue Verbindung startest du selbst.
+Bei einem Verbindungsabbruch zeigt ein Countdown den nächsten Versuch. Schließen des Fensters beendet diese Versuche. Nach 90 Minuten endet die Sitzung; Wiederverbindungen verlängern diese Frist nicht.
 
-Die native Tastaturübernahme gilt für die fokussierte Desktop-Verbindung. Betriebssystemreservierte Sicherheitsfolgen bleiben eine Ausnahme; **Strg + Alt + Entf** über die eigene Schaltfläche an das Windows-Dienstgerät senden. Im Browser stehen die nativen Datei-/Zwischenablagefunktionen und die Übernahme von Systemtastenkombinationen nicht zur Verfügung.
+## Im Hintergrund erreichbar
 
-## Im Hintergrund erreichbar bleiben
+Unter Windows den **Hintergrunddienst** einrichten und eine passende Passwort- oder dauerhafte Freigabe festlegen. Der Dienst startet mit Windows und ermöglicht den Zugriff am Anmeldebildschirm und bei der Benutzerkontensteuerung. Die Windows-Anmeldung bleibt erforderlich. Der Dienst speichert keine Windows-Kennwörter. Ton und Mikrofon sind bei dienstgestützten Verbindungen noch nicht verfügbar.
 
-**Windows:** Das Schließen des Hauptfensters lässt die App im Infobereich weiterlaufen. Von dort lässt sie sich wieder öffnen. Der optionale Systemdienst startet mit Windows und arbeitet unabhängig vom Hauptfenster. Er hat eine eigene Gerätezuordnung und unterstützt den Anmelde-/Sicherheitsdesktop. Windows-Anmeldedaten werden direkt in Windows eingegeben; Zumbyte Remote speichert kein Windows-Passwort und richtet kein Autologin ein.
+Der Mac-Hintergrunddienst und der Linux-Hintergrundstart laufen in der angemeldeten Benutzersitzung. Ein Zugriff vor der Mac-/Linux-Anmeldung oder auf die FileVault-Entsperrung ist nicht enthalten.
 
-**Mac:** Der Benutzer-LaunchAgent hält die App im Hintergrund erreichbar und startet sie nach der Anmeldung. Bildschirmaufnahme und Bedienungshilfen müssen in macOS freigegeben werden. Der Mac-Anmeldebildschirm und FileVault sind in dieser Alpha nicht enthalten. [Mac-Anleitung](docs/MACOS.md).
+Unter Linux ist die vollständige Mehrmonitorsteuerung für X11 vorgesehen. Wayland ist experimentell, verlangt Systemfreigaben und bietet bei mehreren angeschlossenen Bildschirmen zunächst nur die Ansicht. Die [Linux-Anleitung](docs/LINUX.md) beschreibt die Unterschiede.
 
-## Unraid und Community Apps
+## Eigener Server und Unraid
 
-Das Image kann ohne Anmeldung geladen werden:
+Für eine eigene Anmeldung und Geräteliste kannst du zusätzlich den Server betreiben. In der App dafür **Eigener Server …** wählen. [Unraid einrichten](docs/UNRAID.md) · [Server ohne Container](docs/SERVER.md)
 
-```sh
-docker pull ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha
-```
+In Unraid das Repository `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` verwenden und über **Docker → Auf Updates prüfen → Update** aktualisieren. Appdata, Konten, Gerätezuordnungen und eigene IP-Einstellungen bleiben erhalten. Der Container benötigt weder privilegierten Modus noch Docker-Socket.
 
-Konten, Geräte und Anwendungsupdates bleiben im Appdata-Ordner. Der Container benötigt weder privilegierten Modus noch Docker-Socket. Die Vorlage erlaubt auch eine eigene br0-Adresse; bestehende IP-Adressen werden nicht geändert. [Unraid-Anleitung](docs/UNRAID.md).
+## Updates und Datenschutz
 
-Für Community Apps liegen **[ca_profile.xml](ca_profile.xml)** und **[templates/zumbyte-remote.xml](templates/zumbyte-remote.xml)** bereit. Die Vorlage enthält Icon, Beschreibung, Supportlinks, Port und Konfiguration. Die Aufnahme in den CA-Katalog erfolgt nach eigener Einreichung und Prüfung durch Unraid. [Dateien und Einreichung](docs/COMMUNITY-APPS.md).
+Unter **Updates** neue Versionen prüfen. Die App zeigt Downloadfortschritt und bleibende Fehler an. Der Updater verwendet den öffentlichen GitHub-Release-Feed, direkte Paketdateien, eine Signaturprüfung und SHA-256. Ein GitHub-Token ist nicht nötig. [Mehr zu Updates](docs/UPDATES.md)
 
-## Updates
-
-App und Server lesen den öffentlichen GitHub-Release-Feed und laden die passenden Dateien direkt. Dafür sind weder GitHub-API noch GitHub-Token nötig. Vor der Installation werden Signatur, Größe und SHA-256 geprüft.
-
-Unter **Updates** wird das passende Installationspaket gestartet. Profile und Gerätezuordnung bleiben erhalten. Unraid aktualisiert über den Kanal `:alpha` das gesamte Containerimage. Zusätzliche automatische Serverupdates sind mit `AUTO_UPDATE` einschaltbar. [Update-Anleitung](docs/UPDATES.md).
-
-## ServerDesk
-
-Das [Remote-Plugin für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins) ist als eigenes Downloadpaket erhältlich. Für Chat, anklickbare Links und Dateianhänge benötigst du **ServerDesk ab 0.2.0 Beta 27** und das **zRemote-Plugin ab 0.3.0 Alpha 8**. Bitte auch den Remote-Server und das Zielgerät aktualisieren.
-
-Dies bleibt eine Alpha. Native Linux-Desktopsteuerung, Ordnerübertragung, MFA und weitere Praxistests stehen aus. Die Lizenz für Vorlagen und Dokumentation gilt nicht automatisch für die heruntergeladenen Anwendungsdateien.
-
-**Zumbyte – AppSolution · [www.zumbyte.de](https://www.zumbyte.de/)**
+Die öffentliche Vermittlung überträgt Verbindungsangebote und keine Sitzungsinhalte. Router- oder Firewallbeschränkungen können eine direkte Verbindung verhindern. Es gibt keinen Ersatzweg über die Zumbyte-Vermittlung für Bildschirm, Chat oder Dateien. [Datenschutz für zRemote](https://zumbyte.de/zRemote/datenschutz/)

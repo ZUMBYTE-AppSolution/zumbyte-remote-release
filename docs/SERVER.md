@@ -1,8 +1,10 @@
 # Server ohne Docker starten
 
+Für ID-Verbindungen ist kein eigener Server nötig. Diese Anleitung beschreibt die zusätzliche Betriebsart mit eigener Anmeldung und eigener Geräteliste. In der App dafür **Eigener Server …** wählen.
+
 Das Serverpaket benötigt **Node.js 24**. Es enthält die Anwendung und ihre Laufzeitabhängigkeiten; eine Paketinstallation ist nicht nötig.
 
-1. `ZumbyteRemote-Server-0.2.0-alpha.2.tar.gz` vollständig entpacken.
+1. Das aktuelle `ZumbyteRemote-Server-<Version>.tar.gz` vollständig entpacken.
 2. Einen eigenen dauerhaften Datenordner anlegen.
 3. Im entpackten Ordner `runtime` die folgenden Einstellungen setzen und den Launcher starten.
 
