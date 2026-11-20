@@ -1,5 +1,15 @@
 # Änderungen
 
+## 0.3.0 Alpha 10 · 20. November 2026
+
+Die Geräte-ID ist nach dem Beenden oder einem abgebrochenen Start sofort wieder verfügbar. Eine zurückgebliebene Sperre eines bereits beendeten Prozesses verhindert das Öffnen von zRemote nicht mehr.
+
+- Geräte-ID, Passwörter und gespeicherte Freigaben bleiben erhalten.
+- Ein noch laufender Zugriff auf den Gerätespeicher wird weiterhin geschützt.
+- Die Korrektur gilt für Windows, macOS, Linux und die Hilfsprogramme des ServerDesk-Plugins.
+
+Bitte beide zRemote-Apps und das ServerDesk-Plugin auf Alpha 10 aktualisieren. ServerDesk Beta 28 kann weiterverwendet werden.
+
 ## 0.3.0 Alpha 9 · 20. November 2026
 
 ### Verbinden mit ID und Passwort

@@ -1,34 +1,34 @@
 <p align="center"><img src="assets/app-icon.png" width="128" height="128" alt="zRemote"></p>
 <h1 align="center">zRemote</h1>
 <p align="center">Computer über ID und Passwort direkt verbinden.</p>
-<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.9">Downloads</a> · <a href="docs/WINDOWS-SCHNELLSTART.txt">Windows</a> · <a href="docs/MACOS.md">Mac</a> · <a href="docs/LINUX.md">Linux</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
+<p align="center"><a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/tag/v0.3.0-alpha.10">Downloads</a> · <a href="docs/WINDOWS-SCHNELLSTART.txt">Windows</a> · <a href="docs/MACOS.md">Mac</a> · <a href="docs/LINUX.md">Linux</a> · <a href="docs/UNRAID.md">Unraid</a> · <a href="https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/issues">Hilfe und Fehler</a></p>
 
 zRemote zeigt dir eine feste neunstellige ID und ein Einmalpasswort. Gib beides am anderen Computer ein und wähle am Zielgerät aus, was erlaubt sein soll. Ein Konto und ein eigener Server sind dafür optional. Mit einem Zumbyte-Konto kommen ein Verbindungsname, Freunde und Favoriten hinzu.
 
-**0.3.0 Alpha 9** ergänzt ID-Verbindungen ohne Registrierung, einen Annahmedialog mit einzelnen Freigaben und eine Linux-App. Portable und installierte Ausgabe verwenden beim selben Benutzer dieselbe Gerätezuordnung. Die öffentliche Vermittlung tauscht Verbindungsangebote aus; Bild, Eingaben, Chat und Dateien laufen direkt zwischen den Computern.
+**0.3.0 Alpha 10** behebt eine Sperre, die das erneute Öffnen der App verhindern konnte. ID-Verbindungen ohne Registrierung, einzelne Freigaben und die Linux-App sind enthalten. Portable und installierte Ausgabe verwenden beim selben Benutzer dieselbe Gerätezuordnung. Die öffentliche Vermittlung tauscht Verbindungsangebote aus; Bild, Eingaben, Chat und Dateien laufen direkt zwischen den Computern.
 
 ## Herunterladen
 
 | Für … | Download |
 |---|---|
-| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Portable-0.3.0-alpha.9-windows-x64.zip) |
-| Mac mit Apple Silicon | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-0.3.0-alpha.9-macos-arm64.dmg) |
-| Mac mit Intel | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-0.3.0-alpha.9-macos-x64.dmg) |
-| Linux x64 | [DEB-Installer](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Setup-0.3.0-alpha.9-linux-x64.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Portable-0.3.0-alpha.9-linux-x64.tar.gz) |
+| Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-windows-x64.zip) |
+| Mac mit Apple Silicon | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-0.3.0-alpha.10-macos-arm64.dmg) |
+| Mac mit Intel | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-0.3.0-alpha.10-macos-x64.dmg) |
+| Linux x64 | [DEB-Installer](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-x64.tar.gz) |
 | Eigener Server auf Docker / Unraid | `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` · [Einrichtung](docs/UNRAID.md) |
-| Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.9.zip) |
-| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Server-0.3.0-alpha.9.tar.gz) |
-| Imageimport / Containerkonfiguration | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-DockerImage-0.3.0-alpha.9-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.9.zip) |
+| Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.10.zip) |
+| Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Server-0.3.0-alpha.10.tar.gz) |
+| Imageimport / Containerkonfiguration | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-DockerImage-0.3.0-alpha.10-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.10.zip) |
 
-[Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.9/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md) · [zRemote für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins)
+[Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md) · [zRemote für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins)
 
 Windows-Pakete enthalten die benötigten Laufzeiten und sind digital signiert. Mac-Pakete sind mit Developer ID signiert und bei Apple notarisiert; macOS 13 oder neuer wird benötigt. Der Linux-Installer ist für Ubuntu 22.04 oder neuer und vergleichbare Debian-Systeme vorgesehen. Für den geschützten Linux-Gerätespeicher muss der Anmeldeschlüsselbund verfügbar sein.
 
 ## Die App
 
-![Mit ID und Passwort verbinden](assets/screenshots/alpha9-verbinden.png)
+![Mit ID und Passwort verbinden](assets/screenshots/alpha10-verbinden.png)
 
-![Zugriff auf diesen Computer einstellen](assets/screenshots/alpha9-zugriff.png)
+![Zugriff auf diesen Computer einstellen](assets/screenshots/alpha10-zugriff.png)
 
 Die Bilder zeigen zRemote unter Linux.
 

@@ -9,7 +9,7 @@
   <Project>https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release</Project>
   <Overview>Optionaler eigener Server für zRemote: zentrale Anmeldung, feste Geräteliste und Fernzugriff auf eingerichtete Computer. Die Apps verbinden sich über deine HTTPS-Adresse. Konten und Geräte bleiben im Appdata-Ordner erhalten. Signierte Anwendungsupdates benötigen weder GitHub-API noch GitHub-Token. Alpha-Version. Vor dem Start eine eigene HTTPS-Domain mit Reverse Proxy und WebSocket-Unterstützung einrichten; interner Zielport ist HTTP 8787. Für direkte Internetverbindungen zusätzlich UDP 3478 an den Container weiterleiten. Bild, Eingaben und Dateien werden direkt zwischen den Geräten übertragen.</Overview>
   <Beta>true</Beta>
-  <DefaultTagDescription>Alpha-Kanal: neue Containerimages direkt über Unraids Dockerverwaltung aktualisieren. Aktuell 0.3.0-alpha.9.</DefaultTagDescription>
+  <DefaultTagDescription>Alpha-Kanal: neue Containerimages direkt über Unraids Dockerverwaltung aktualisieren. Aktuell 0.3.0-alpha.10.</DefaultTagDescription>
   <MinVer>6.12.0</MinVer>
   <Shell>sh</Shell>
   <TemplateURL>https://raw.githubusercontent.com/ZUMBYTE-AppSolution/zumbyte-remote-release/main/templates/zumbyte-remote.xml</TemplateURL>
