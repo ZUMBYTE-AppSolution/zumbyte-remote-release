@@ -3,6 +3,20 @@ zRemote für Linux
 
 Installation
 
+Für Fedora und GamerZ OS gibt es ein natives RPM-Paket für x86_64. Im
+AppStore das Repository „ZUMBYTE-AppSolution/zumbyte-remote-release“ und
+Alpha 10 wählen, dann die Datei mit „linux-x86_64.rpm“ installieren.
+Bei Bedarf zuerst die GitHub-Quelle im AppStore aktualisieren.
+Abhängigkeiten und Menüeintrag richtet die Paketverwaltung ein.
+Alternativ im Downloadordner:
+
+    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64.rpm
+
+Bei einer RPM-Installation verwendet auch der zRemote-Updater wieder ein
+RPM-Paket und die System-Paketverwaltung. Benutzerprofile, Geräte-ID und
+gespeicherte Freigaben bleiben dabei erhalten. Eine laufende portable oder
+.run-Ausgabe bitte vor dem Wechsel vollständig über „App beenden“ schließen.
+
 Wähle die Ausgabe passend zu deinem Computer:
 
 • x64: normale PCs mit Intel- oder AMD-Prozessor.
@@ -64,7 +78,7 @@ einrichten. Das Schließen des Hauptfensters lässt zRemote im Infobereich
 weiterlaufen. Über „App beenden“ beendest du die Freigabe.
 
 Updates zeigen ihren Downloadfortschritt an und prüfen die Herkunft und
-Prüfsumme. Bei einer DEB-Installation fragt die Paketverwaltung nach deiner
+Prüfsumme. Bei einer DEB- oder RPM-Installation fragt die Paketverwaltung nach deiner
 Bestätigung. Die .run-Installation und portable Ausgaben aktualisieren sich
 in ihrem eigenen Ordner. Geräte-ID und Einstellungen bleiben erhalten.
 Es werden öffentliche Release-Dateien und der GitHub-Atom-Feed verwendet;

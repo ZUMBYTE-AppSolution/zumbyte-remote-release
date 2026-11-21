@@ -2,6 +2,13 @@
 
 ## 0.3.0 Alpha 10 · 20. November 2026
 
+### RPM für Fedora und GamerZ OS · ergänzt am 21. November
+
+- Natives RPM-Paket für x86_64, direkt über den GamerZ-AppStore installierbar.
+- Abhängigkeiten und Menüeintrag werden von der Paketverwaltung eingerichtet.
+- Updates verwenden weiterhin RPM und zeigen den Downloadfortschritt an. Geräte-ID und Einstellungen bleiben erhalten.
+- Der geschützte Gerätespeicher funktioniert auch in der Hyprland-Sitzung von GamerZ OS.
+
 ### Linux-Installer · ergänzt am 21. November
 
 - Grafische Installer für x64 und ARM64, einschließlich Raspberry Pi mit 64-Bit-Desktop-System.
