@@ -2,6 +2,16 @@
 
 ## 0.3.0 Alpha 10 · 20. November 2026
 
+### Linux-Installer · ergänzt am 21. November
+
+- Grafische Installer für x64 und ARM64, einschließlich Raspberry Pi mit 64-Bit-Desktop-System.
+- Installation im eigenen Benutzerkonto, Menüeintrag und wählbare Desktopverknüpfung.
+- Hintergrundstart nach der Linux-Anmeldung ist wählbar.
+- Updates und Deinstallation erhalten Geräte-ID und persönliche Einstellungen.
+- Updates funktionieren auch auf Distributionen mit neueren Systembibliotheken.
+
+Der .run-Installer ist auch für Fedora, openSUSE und Arch vorgesehen. DEB-Pakete und portable Ausgaben bleiben als Alternative verfügbar. ARM64 ist neu; ein Test auf einem echten Raspberry Pi steht noch aus.
+
 Die Geräte-ID ist nach dem Beenden oder einem abgebrochenen Start sofort wieder verfügbar. Eine zurückgebliebene Sperre eines bereits beendeten Prozesses verhindert das Öffnen von zRemote nicht mehr.
 
 - Geräte-ID, Passwörter und gespeicherte Freigaben bleiben erhalten.

@@ -14,15 +14,16 @@ zRemote zeigt dir eine feste neunstellige ID und ein Einmalpasswort. Gib beides 
 | Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-windows-x64.zip) |
 | Mac mit Apple Silicon | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-0.3.0-alpha.10-macos-arm64.dmg) |
 | Mac mit Intel | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-0.3.0-alpha.10-macos-x64.dmg) |
-| Linux x64 | [DEB-Installer](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-x64.tar.gz) |
+| Linux x64 · Intel/AMD | [Grafischer Installer (.run)](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.run) · [DEB](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64-r2.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-x64-universal.tar.gz) |
+| Linux ARM64 · auch Raspberry Pi mit 64-Bit-System | [Grafischer Installer (.run)](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-arm64.run) · [DEB](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-arm64.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-arm64.tar.gz) |
 | Eigener Server auf Docker / Unraid | `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` · [Einrichtung](docs/UNRAID.md) |
 | Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.10.zip) |
 | Server ohne Container | [Node.js-24-Serverpaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Server-0.3.0-alpha.10.tar.gz) |
 | Imageimport / Containerkonfiguration | [Imagearchiv Linux amd64](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-DockerImage-0.3.0-alpha.10-linux-amd64.tar.gz) · [Docker-/Unraid-Paket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Unraid-Docker-0.3.0-alpha.10.zip) |
 
-[Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md) · [zRemote für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins)
+[Linux-Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/SHA256SUMS-linux.txt) · [Weitere Prüfsummen](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/SHA256SUMS.txt) · [Änderungen](CHANGELOG.md) · [zRemote für ServerDesk](https://github.com/ZUMBYTE-AppSolution/serverdesk-plugins)
 
-Windows-Pakete enthalten die benötigten Laufzeiten und sind digital signiert. Mac-Pakete sind mit Developer ID signiert und bei Apple notarisiert; macOS 13 oder neuer wird benötigt. Der Linux-Installer ist für Ubuntu 22.04 oder neuer und vergleichbare Debian-Systeme vorgesehen. Für den geschützten Linux-Gerätespeicher muss der Anmeldeschlüsselbund verfügbar sein.
+Windows-Pakete enthalten die benötigten Laufzeiten und sind digital signiert. Mac-Pakete sind mit Developer ID signiert und bei Apple notarisiert; macOS 13 oder neuer wird benötigt. Für Linux gibt es jetzt grafische Installer für x64 und ARM64. Sie installieren zRemote für dein Benutzerkonto, tragen die App im Menü ein und können eine Desktopverknüpfung anlegen. Unterstützt werden aktuelle glibc-Desktops ab glibc 2.35; die [Linux-Anleitung](docs/LINUX.md) nennt Voraussetzungen und Installationsschritte. Der Anmeldeschlüsselbund muss verfügbar sein. ARM64 ist als Vorschau enthalten; ein Test auf einem echten Raspberry Pi steht noch aus.
 
 ## Die App
 
@@ -31,6 +32,8 @@ Windows-Pakete enthalten die benötigten Laufzeiten und sind digital signiert. M
 ![Zugriff auf diesen Computer einstellen](assets/screenshots/alpha10-zugriff.png)
 
 Die Bilder zeigen zRemote unter Linux.
+
+![zRemote unter Linux installieren](assets/screenshots/alpha10-linux-installer.png)
 
 ## Erste Verbindung
 
