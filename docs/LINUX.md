@@ -5,15 +5,15 @@ Installation
 
 Für Fedora und GamerZ OS gibt es ein natives RPM-Paket für x86_64. Im
 AppStore das Repository „ZUMBYTE-AppSolution/zumbyte-remote-release“ und
-Alpha 10 wählen, dann die korrigierte Datei mit „linux-x86_64-r2.rpm“ installieren.
+Alpha 10 wählen, dann die korrigierte Datei mit „linux-x86_64-r3.rpm“ installieren.
 Bei Bedarf zuerst die GitHub-Quelle im AppStore aktualisieren.
 Abhängigkeiten und Menüeintrag richtet die Paketverwaltung ein.
 Alternativ im Downloadordner:
 
-    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64-r2.rpm
+    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64-r3.rpm
 
-Revision 2 behebt die Bildschirmübertragung und Eingaben auf GamerZ OS mit
-Hyprland und ergänzt den Linux-Systemdienst. Die Versionsanzeige der App
+Revision 3 ergänzt die direkte Bildschirmaufnahme des Systemdienstes auf
+GamerZ OS und kompatiblen Wayland-Desktops. Die Versionsanzeige der App
 bleibt „0.3.0-alpha.10“; die Paketverwaltung erkennt die neuere Revision.
 Bitte die neue Datei einmal über den AppStore oder die Paketverwaltung
 installieren. Der App-Updater bietet Revisionen derselben App-Version
@@ -69,7 +69,19 @@ anderen Computers ein. Ein Konto ist dafür nicht erforderlich. Der entfernte
 Benutzer wählt, welche Funktionen freigegeben werden. Mit Pos1 gibst du Maus
 und Tastatur am steuernden Computer wieder frei.
 
-Wayland fragt zusätzlich nach der Bildschirmfreigabe. Je nach Desktop ist
+Der Systemdienst verwendet auf GamerZ OS und kompatiblen Hyprland-/wlroots-
+Desktops den direkten Aufnahmezugang. Die Programmfreigabe wird beim
+Einrichten des Dienstes vorbereitet. Eine ausdrücklich verweigerte
+Bildschirmaufnahme bleibt gesperrt. Bei „Mein Account ohne Passwort“ auf
+dem eigenen Server ist kein Annahmedialog erforderlich. Während der
+Verbindung erscheint das kleine, minimierbare Freigabefenster wie unter
+Windows und macOS. Dort kannst du Rechte ändern oder die Verbindung trennen.
+
+Auf anderen Wayland-Desktops ist die lokale Bildschirmfreigabe nötig; ein
+vollständig unbeaufsichtigter Desktopzugriff ist dort nicht zugesichert.
+Eine bestätigte Aufnahme wird für weitere Verbindungen wiederverwendet.
+Abbruch oder verweigerte Freigabe lösen bei automatischen Wiederverbindungen
+keine weiteren Auswahldialoge aus. Je nach Desktop ist
 eine zweite Freigabe für Maus und Tastatur nötig. Wähle dann in beiden
 Systemdialogen denselben Bildschirm. Hyprland und kompatible wlroots-
 Desktops können ihren eigenen Eingabezugang verwenden. Die Auflösung und
@@ -85,7 +97,7 @@ Freigabe. Die Grafikauflösung bleibt unter Wayland unverändert.
 
 Zugriff vor der Anmeldung
 
-Installiere die RPM-Revision 2 systemweit und wähle in zRemote unter
+Installiere die RPM-Revision 3 systemweit und wähle in zRemote unter
 „Dieser Computer“ beziehungsweise in den Geräteeinstellungen
 „Linux-Systemdienst einrichten“. Bestätige die Linux-Administratorabfrage.
 Der Dienst startet danach mit dem Computer. Geräte-ID, Passwort und die

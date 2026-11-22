@@ -2,6 +2,16 @@
 
 ## 0.3.0 Alpha 10 · 20. November 2026
 
+### Linux-RPM Revision 3 · ergänzt am 22. November
+
+- Direkte Bildschirmaufnahme des Systemdienstes auf GamerZ OS und kompatiblen Hyprland-/wlroots-Desktops.
+- Keine Annahme vor Ort bei „Mein Account ohne Passwort“ auf dem eigenen Server.
+- Bestätigte Bildschirmaufnahmen werden wiederverwendet. Wiederverbindungen öffnen nach Abbruch oder Ablehnung keine weiteren Auswahldialoge.
+- Dasselbe kleine, minimierbare Freigabefenster wie unter Windows und macOS, mit Rechten und Trennen.
+- Das große Hauptfenster blendet sich bei eingehendem Dienstzugriff aus.
+
+Die neue Datei endet auf „linux-x86_64-r3.rpm“. Einmal über AppStore oder Paketverwaltung installieren. Andere Alpha-10-Downloads bleiben unverändert.
+
 ### Linux-RPM Revision 2 · ergänzt am 22. November
 
 - Bildschirmfreigabe funktioniert auf GamerZ OS mit Hyprland auch bei Verwendung von XWayland.
