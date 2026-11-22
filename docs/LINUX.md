@@ -5,12 +5,20 @@ Installation
 
 Für Fedora und GamerZ OS gibt es ein natives RPM-Paket für x86_64. Im
 AppStore das Repository „ZUMBYTE-AppSolution/zumbyte-remote-release“ und
-Alpha 10 wählen, dann die Datei mit „linux-x86_64.rpm“ installieren.
+Alpha 10 wählen, dann die korrigierte Datei mit „linux-x86_64-r2.rpm“ installieren.
 Bei Bedarf zuerst die GitHub-Quelle im AppStore aktualisieren.
 Abhängigkeiten und Menüeintrag richtet die Paketverwaltung ein.
 Alternativ im Downloadordner:
 
-    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64.rpm
+    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64-r2.rpm
+
+Revision 2 behebt die Bildschirmübertragung und Eingaben auf GamerZ OS mit
+Hyprland und ergänzt den Linux-Systemdienst. Die Versionsanzeige der App
+bleibt „0.3.0-alpha.10“; die Paketverwaltung erkennt die neuere Revision.
+Bitte die neue Datei einmal über den AppStore oder die Paketverwaltung
+installieren. Der App-Updater bietet Revisionen derselben App-Version
+nicht als neue Version an. Andere Alpha-10-Linux-Pakete enthalten diese
+Korrektur noch nicht.
 
 Bei einer RPM-Installation verwendet auch der zRemote-Updater wieder ein
 RPM-Paket und die System-Paketverwaltung. Benutzerprofile, Geräte-ID und
@@ -61,21 +69,58 @@ anderen Computers ein. Ein Konto ist dafür nicht erforderlich. Der entfernte
 Benutzer wählt, welche Funktionen freigegeben werden. Mit Pos1 gibst du Maus
 und Tastatur am steuernden Computer wieder frei.
 
-Wayland fragt zusätzlich nach der Freigabe von Bildschirm, Maus und Tastatur.
-Wähle in den beiden Systemdialogen denselben Bildschirm. Die Auflösung und
+Wayland fragt zusätzlich nach der Bildschirmfreigabe. Je nach Desktop ist
+eine zweite Freigabe für Maus und Tastatur nötig. Wähle dann in beiden
+Systemdialogen denselben Bildschirm. Hyprland und kompatible wlroots-
+Desktops können ihren eigenen Eingabezugang verwenden. Die Auflösung und
 Systemtastenkürzel verwaltet unter Wayland der Desktop. Das Verbindungsfenster
 passt das Bild proportional ein. Bei mehreren angeschlossenen Bildschirmen
 steht unter Wayland in dieser Ausgabe nur die Ansicht zur Verfügung, damit
 Eingaben nicht auf dem falschen Bildschirm landen. Für die vollständige
 Steuerung mehrerer Monitore bitte eine X11-Sitzung verwenden. Die Wayland-
-Unterstützung ist noch experimentell. Ein Zugriff vor der Linux-Anmeldung wird
-in dieser Ausgabe nicht unterstützt.
+Unterstützung ist noch experimentell. zRemote prüft die verfügbaren
+Systemfreigaben; fehlende oder abgelehnte Eingaberechte werden als Fehler
+angezeigt. Ein eigenes zRemote-Gerätepasswort ersetzt keine Betriebssystem-
+Freigabe. Die Grafikauflösung bleibt unter Wayland unverändert.
+
+Zugriff vor der Anmeldung
+
+Installiere die RPM-Revision 2 systemweit und wähle in zRemote unter
+„Dieser Computer“ beziehungsweise in den Geräteeinstellungen
+„Linux-Systemdienst einrichten“. Bestätige die Linux-Administratorabfrage.
+Der Dienst startet danach mit dem Computer. Geräte-ID, Passwort und die
+Zuordnung zu deinem eigenen Server werden übernommen.
+
+Vor der Anmeldung braucht die Verbindung ein gültiges zRemote-Passwort,
+eine dauerhafte Freigabe oder die eingerichtete Kontofreigabe deines eigenen
+Servers. Eine Bestätigung durch einen angemeldeten Benutzer ist dort
+naturgemäß nicht möglich. Dein Linux-Anmeldekennwort wird weder gespeichert
+noch automatisch eingegeben.
+
+Bei einer Textanmeldung wird die echte Anmeldekonsole übertragen. Stellt
+eine grafische Wayland-Anmeldung keine Fernsteuerungsfreigabe bereit,
+öffnet der Dienst erst nach freigegebenem Zugriff eine freie Textanmeldung.
+Nach dem Trennen kehrt er zur ursprünglichen Anzeige zurück, sofern an der
+Textkonsole keine Anmeldung erfolgt ist. Eine vorhandene Benutzersitzung
+wird nicht beendet. Nach der grafischen Anmeldung verbindet sich der Client
+erneut; gegebenenfalls muss die lokale Bildschirmfreigabe bestätigt werden.
+
+Der Linux-Systemdienst unterstützt derzeit Bild und Eingaben. Chat, Dateien,
+Zwischenablage und Ton sind in diesem Dienst noch nicht verfügbar. Die
+normale App bietet weiterhin die übrigen Verbindungsfunktionen. Für den
+Systemdienst werden systemd, logind, Xvfb, freie virtuelle Konsolen und ein
+Kernel mit uinput benötigt. Auf anderen Init-Systemen bleibt der Start
+nach der Benutzeranmeldung verfügbar. Eine reine Serverinstallation ohne
+grafische Laufzeit und unveränderliche Systeminstallationen sind mit dem
+RPM nicht abgedeckt.
 
 Hintergrund und Updates
 
 Unter Einstellungen kannst du den Hintergrundstart für deine Linux-Anmeldung
 einrichten. Das Schließen des Hauptfensters lässt zRemote im Infobereich
-weiterlaufen. Über „App beenden“ beendest du die Freigabe.
+weiterlaufen. Ohne Systemdienst beendet „App beenden“ die Freigabe. Ein
+eingerichteter Systemdienst bleibt unabhängig von der App aktiv und lässt
+sich über die Linux-Diensteverwaltung stoppen.
 
 Updates zeigen ihren Downloadfortschritt an und prüfen die Herkunft und
 Prüfsumme. Bei einer DEB- oder RPM-Installation fragt die Paketverwaltung nach deiner
@@ -85,4 +130,8 @@ Es werden öffentliche Release-Dateien und der GitHub-Atom-Feed verwendet;
 ein GitHub-Konto oder Token wird nicht benötigt.
 
 Verbindungen laufen direkt zwischen den beteiligten Computern. Die Zumbyte-
-Vermittlung überträgt Verbindungsangebote. Nach 90 Minuten endet eine Sitzung.
+Vermittlung überträgt Verbindungsangebote. Nur bei der öffentlichen ID-
+Vermittlung endet eine Sitzung nach 90 Minuten. Verbindungen über einen
+eigenen Server sind ohne dieses Zeitlimit vorgesehen; dafür müssen auch
+Server und steuernde App die Korrektur enthalten. Ältere Ausgaben können
+die Verbindung weiterhin nach 90 Minuten beenden.

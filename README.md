@@ -9,12 +9,15 @@ zRemote zeigt dir eine feste neunstellige ID und ein Einmalpasswort. Gib beides 
 
 ## Herunterladen
 
+**Linux-RPM Revision 2:** Behebt das schwarze Bild und die Eingaben auf GamerZ OS mit Hyprland. Der neue Linux-Systemdienst ermöglicht außerdem Zugriff vor der Anmeldung. Im AppStore die Quelle aktualisieren und die Datei mit `linux-x86_64-r2.rpm` wählen. Die App zeigt weiterhin Alpha 10 an; die Paketverwaltung erkennt die neuere Revision. Die anderen Linux-Pakete enthalten diese Korrektur noch nicht. [Dienst einrichten und Voraussetzungen prüfen](docs/LINUX.md).
+
+
 | Für … | Download |
 |---|---|
 | Windows x64 | [Installer mit Desktopverknüpfung](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-windows-x64.exe) · [Portable ZIP](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-windows-x64.zip) |
 | Mac mit Apple Silicon | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-macos-arm64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-0.3.0-alpha.10-macos-arm64.dmg) |
 | Mac mit Intel | [PKG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-macos-x64.pkg) · [DMG](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-0.3.0-alpha.10-macos-x64.dmg) |
-| Linux x86_64 · Intel/AMD | [RPM für Fedora / GamerZ OS](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64.rpm) · [Grafischer Installer (.run)](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.run) · [DEB](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64-r2.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-x64-universal.tar.gz) |
+| Linux x86_64 · Intel/AMD | [RPM Revision 2 für Fedora / GamerZ OS](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64-r2.rpm) · [Grafischer Installer (.run)](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.run) · [DEB](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64-r2.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-x64-universal.tar.gz) |
 | Linux ARM64 · auch Raspberry Pi mit 64-Bit-System | [Grafischer Installer (.run)](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-arm64.run) · [DEB](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Setup-0.3.0-alpha.10-linux-arm64.deb) · [Portable TAR.GZ](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Portable-0.3.0-alpha.10-linux-arm64.tar.gz) |
 | Eigener Server auf Docker / Unraid | `ghcr.io/zumbyte-appsolution/zumbyte-remote-server:alpha` · [Einrichtung](docs/UNRAID.md) |
 | Unraid Community Apps | [Vorlage und Anbieterprofil](docs/COMMUNITY-APPS.md) · [Dateipaket](https://github.com/ZUMBYTE-AppSolution/zumbyte-remote-release/releases/download/v0.3.0-alpha.10/ZumbyteRemote-Unraid-CommunityApps-0.3.0-alpha.10.zip) |
@@ -60,7 +63,7 @@ Unter **Darstellung und Qualität** kannst du das Bild einpassen, in Originalgr�
 
 Text und einzelne Dateien lassen sich in beide Richtungen über die freigegebene Zwischenablage übertragen. Im **Chat** stehen Sprechblasen, anklickbare Links und Dateianhänge mit Fortschritt zur Verfügung. **Speichern …** legt einen empfangenen Anhang gezielt ab, ohne die Zwischenablage zu überschreiben. Ordnerübertragung ist noch nicht enthalten.
 
-Bei einem Verbindungsabbruch zeigt ein Countdown den nächsten Versuch. Schließen des Fensters beendet diese Versuche. Nach 90 Minuten endet die Sitzung; Wiederverbindungen verlängern diese Frist nicht.
+Bei einem Verbindungsabbruch zeigt ein Countdown den nächsten Versuch. Schließen des Fensters beendet diese Versuche. Öffentliche ID-Verbindungen enden nach 90 Minuten; Wiederverbindungen verlängern diese Frist nicht. Der korrigierte Linux-Client setzt für Verbindungen über einen eigenen Server kein solches Zeitlimit. Ältere Server oder Gegenstellen können weiterhin nach 90 Minuten trennen und benötigen ebenfalls eine korrigierte Ausgabe.
 
 ## Im Hintergrund erreichbar
 

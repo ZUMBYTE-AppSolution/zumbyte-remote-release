@@ -2,6 +2,17 @@
 
 ## 0.3.0 Alpha 10 · 20. November 2026
 
+### Linux-RPM Revision 2 · ergänzt am 22. November
+
+- Bildschirmfreigabe funktioniert auf GamerZ OS mit Hyprland auch bei Verwendung von XWayland.
+- Maus und Tastatur nutzen den verfügbaren Wayland-Eingabezugang. Abgelehnte Systemfreigaben bleiben gesperrt.
+- Unter Wayland bleibt die Bildschirmauflösung unverändert; das Bild wird proportional eingepasst.
+- Neuer Linux-Systemdienst für Zugriff vor der Anmeldung, mit Bild und Eingaben. Bei Bedarf wird nach freigegebenem Zugriff eine freie Textanmeldung verwendet.
+- Paketupdates erhalten Geräte-ID, Passwörter, Serverzuordnung und Dienstschlüssel.
+- Der Linux-Client setzt für Verbindungen über den eigenen Server kein 90-Minuten-Zeitlimit mehr. Ältere Server und Gegenstellen benötigen die entsprechende Korrektur ebenfalls.
+
+Die neue Datei endet auf „linux-x86_64-r2.rpm“. Einmal über AppStore oder Paketverwaltung installieren; Revisionen derselben App-Version erscheinen nicht als neue Version im App-Updater. Andere Alpha-10-Linux-Pakete bleiben unverändert.
+
 ### RPM für Fedora und GamerZ OS · ergänzt am 21. November
 
 - Natives RPM-Paket für x86_64, direkt über den GamerZ-AppStore installierbar.
