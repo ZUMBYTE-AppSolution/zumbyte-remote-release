@@ -1,5 +1,13 @@
 # Änderungen
 
+## zRemote 0.3.0-alpha.11
+
+- Direkte Verbindungen berücksichtigen mehrere lokale Netzwerkadapter. Bitte beide Computer aktualisieren.
+- Linux: Kontozugriff über den eigenen Server ohne zusätzliches Freigabefenster.
+- Linux: Hauptfenster erst bei bestehender Verbindung ausblenden und danach wieder anzeigen.
+- Linux: Aktive Fernsteuerung über das App-Symbol im Infobereich trennen.
+- Entsprechende Verbindungskorrektur für Windows und macOS.
+
 ## 0.3.0 Alpha 10 · 20. November 2026
 
 ### Linux-RPM Revision 3 · ergänzt am 22. November

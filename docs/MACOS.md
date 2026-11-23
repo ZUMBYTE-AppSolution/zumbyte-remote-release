@@ -14,6 +14,8 @@ Unter **Dieser Computer → Freigaben erneut prüfen** die macOS-Freigaben prüf
 
 Ohne Bildschirmfreigabe kann der Mac kein Bild übertragen; ohne Bedienungshilfen kann er keine Maus- und Tastatureingaben annehmen. Ein zentraler Login ersetzt diese macOS-Freigaben nicht.
 
+Wenn macOS nach dem Zugriff auf das lokale Netzwerk fragt, erlaube ihn für direkte Verbindungen im Heimnetz. Ab Alpha 11 berücksichtigt zRemote auch zusätzliche lokale Netzwerkadapter. Bitte beide Computer aktualisieren.
+
 ## Hintergrunddienst einrichten
 
 In der installierten App unter **Dieser Computer → Hintergrunddienst einrichten** aktivieren. Der Dienst läuft als LaunchAgent des angemeldeten Benutzers. Seine Datei liegt unter `~/Library/LaunchAgents/de.zumbyte.remote.agent.plist`. Ein kleiner Helfer hält die App im Hintergrund offen und startet sie nach der Benutzeranmeldung erneut.
@@ -30,6 +32,6 @@ Jede Verbindung öffnet ein eigenes Fenster. Ins Bild klicken, um fernzusteuern.
 
 Bei geöffnetem MacBook oder aktiver, entsperrter Sitzung passt zRemote das Bild proportional ins Fenster ein. Ein tatsächlicher Auflösungswechsel wird nur angeboten, wenn der Mac gesperrt ist, kein geöffneter Laptopbildschirm entgegensteht und macOS einen aktiven Bildschirm mit passenden Modi bereitstellt. Die Anordnung der Bildschirme bleibt erhalten. Ist ein Wechsel nicht möglich, bleibt das vollständige Bild eingepasst. Ein virtueller Zusatzbildschirm ist nicht enthalten.
 
-Die Vermittlung überträgt nur Verbindungsangebote. Bild, Eingaben, Ton und Dateien laufen direkt zwischen den Computern. Eine Sitzung endet nach 90 Minuten. Bei einem vorzeitigen Abbruch zeigt das Verbindungsfenster den Countdown bis zum nächsten Versuch; Schließen des Fensters beendet diese Versuche.
+Die Vermittlung überträgt nur Verbindungsangebote. Bild, Eingaben, Ton und Dateien laufen direkt zwischen den Computern. Nur Verbindungen über die öffentliche ID-Vermittlung enden nach 90 Minuten. Verbindungen über den eigenen Server haben dieses Zeitlimit nicht; dafür müssen Server und beide Apps eine aktuelle Ausgabe verwenden. Bei einem vorzeitigen Abbruch zeigt das Verbindungsfenster den Countdown bis zum nächsten Versuch; Schließen des Fensters beendet diese Versuche.
 
 Unter **Updates** neue Versionen prüfen. Die App lädt das passende PKG direkt aus dem GitHub-Release und prüft Signatur sowie SHA-256. Vor dem Installieren Fernsitzungen beenden. Das Systeminstallationsprogramm führt das Update aus; ein eingerichteter Hintergrunddienst wird anschließend wiederhergestellt. Bei Abbruch des Installationsdialogs die bisherige App erneut öffnen, damit sie ihren Hintergrunddienst wiederherstellt.

@@ -5,20 +5,17 @@ Installation
 
 Für Fedora und GamerZ OS gibt es ein natives RPM-Paket für x86_64. Im
 AppStore das Repository „ZUMBYTE-AppSolution/zumbyte-remote-release“ und
-Alpha 10 wählen, dann die korrigierte Datei mit „linux-x86_64-r3.rpm“ installieren.
+Alpha 11 wählen, dann die Datei mit „linux-x86_64.rpm“ installieren.
 Bei Bedarf zuerst die GitHub-Quelle im AppStore aktualisieren.
 Abhängigkeiten und Menüeintrag richtet die Paketverwaltung ein.
 Alternativ im Downloadordner:
 
-    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x86_64-r3.rpm
+    sudo dnf install ./ZumbyteRemote-Setup-0.3.0-alpha.11-linux-x86_64.rpm
 
-Revision 3 ergänzt die direkte Bildschirmaufnahme des Systemdienstes auf
-GamerZ OS und kompatiblen Wayland-Desktops. Die Versionsanzeige der App
-bleibt „0.3.0-alpha.10“; die Paketverwaltung erkennt die neuere Revision.
-Bitte die neue Datei einmal über den AppStore oder die Paketverwaltung
-installieren. Der App-Updater bietet Revisionen derselben App-Version
-nicht als neue Version an. Andere Alpha-10-Linux-Pakete enthalten diese
-Korrektur noch nicht.
+Alpha 11 verbessert den Verbindungsaufbau bei mehreren Netzwerkadaptern,
+etwa mit virtuellen Maschinen. Bitte beide Computer aktualisieren. Der
+Systemdienst unterstützt die direkte Bildschirmaufnahme auf GamerZ OS und
+kompatiblen Wayland-Desktops.
 
 Bei einer RPM-Installation verwendet auch der zRemote-Updater wieder ein
 RPM-Paket und die System-Paketverwaltung. Benutzerprofile, Geräte-ID und
@@ -44,8 +41,8 @@ Grafiktreiber können die verfügbaren Fernsteuerungsfunktionen beeinflussen.
 Lade den .run-Installer herunter, erlaube in seinen Dateieigenschaften das
 Ausführen und starte ihn. Alternativ im Downloadordner, für x64:
 
-    chmod +x ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.run
-    ./ZumbyteRemote-Setup-0.3.0-alpha.10-linux-x64.run
+    chmod +x ./ZumbyteRemote-Setup-0.3.0-alpha.11-linux-x64.run
+    ./ZumbyteRemote-Setup-0.3.0-alpha.11-linux-x64.run
 
 Für ARM64 die Datei mit „linux-arm64.run“ verwenden. Bitte ohne sudo starten.
 Der Assistent installiert zRemote für dein Benutzerkonto und legt einen
@@ -73,9 +70,12 @@ Der Systemdienst verwendet auf GamerZ OS und kompatiblen Hyprland-/wlroots-
 Desktops den direkten Aufnahmezugang. Die Programmfreigabe wird beim
 Einrichten des Dienstes vorbereitet. Eine ausdrücklich verweigerte
 Bildschirmaufnahme bleibt gesperrt. Bei „Mein Account ohne Passwort“ auf
-dem eigenen Server ist kein Annahmedialog erforderlich. Während der
-Verbindung erscheint das kleine, minimierbare Freigabefenster wie unter
-Windows und macOS. Dort kannst du Rechte ändern oder die Verbindung trennen.
+dem eigenen Server ist kein Annahmedialog erforderlich. Bei diesem
+Kontozugriff öffnet sich kein zusätzliches Freigabefenster. Im vorhandenen
+Infobereich zeigt zRemote die aktive Fernsteuerung an; über dessen Menü
+kannst du die Verbindung trennen. Das Hauptfenster wird erst ausgeblendet,
+wenn die Verbindung hergestellt ist, und nach dem Trennen wieder angezeigt.
+Bei öffentlichen ID-Verbindungen bleiben Annahme und Freigaberechte verfügbar.
 
 Auf anderen Wayland-Desktops ist die lokale Bildschirmfreigabe nötig; ein
 vollständig unbeaufsichtigter Desktopzugriff ist dort nicht zugesichert.
@@ -97,7 +97,7 @@ Freigabe. Die Grafikauflösung bleibt unter Wayland unverändert.
 
 Zugriff vor der Anmeldung
 
-Installiere die RPM-Revision 3 systemweit und wähle in zRemote unter
+Installiere das aktuelle RPM- oder DEB-Paket systemweit und wähle in zRemote unter
 „Dieser Computer“ beziehungsweise in den Geräteeinstellungen
 „Linux-Systemdienst einrichten“. Bestätige die Linux-Administratorabfrage.
 Der Dienst startet danach mit dem Computer. Geräte-ID, Passwort und die
